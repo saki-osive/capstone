@@ -737,68 +737,68 @@ children: [
         ],
     },
 
-    //Bidder
+    //Farmer
     {
-        path: '/bidder',
+        path: '/farmer',
         name: 'BidderIndex',
         props: true,
-        component: () => import('@/stakeholderScreens/bidder/BidderIndex.vue'),
+        component: () => import('@/stakeholderScreens/farmer/FarmerIndex.vue'),
         children: [
             {
                 path: 'dashboard',
                 name: 'BidderDashboard',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/BidderDashboard.vue'),
+                    import('@/stakeholderScreens/farmer/FarmerDashboard.vue'),
             },
             {
                 path: 'profile',
                 name: 'BidderProfile',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/src/BidderProfile.vue'),
+                    import('@/stakeholderScreens/farmer/src/FarmerProfile.vue'),
             },
             {
                 path: 'submittedBids',
                 name: 'SubmittedBids',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/src/submittedBids.vue'),
+                    import('@/stakeholderScreens/farmer/src/submittedProducts.vue'),
             },
             {
                 path: 'approvedBids',
                 name: 'ApprovedBids',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/src/ApprovedBids.vue'),
+                    import('@/stakeholderScreens/farmer/src/ApprovedProducts.vue'),
             },
             {
                 path: 'bookForFreight',
                 name: 'BookForFreight',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/src/BookForFreight.vue'),
+                    import('@/stakeholderScreens/farmer/src/BookForFreight.vue'),
             },
             {
                 path: 'bookForSupplier',
                 name: 'BookForSupplier',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/src/BookForSupplier.vue'),
+                    import('@/stakeholderScreens/farmer/src/BookForSupplier.vue'),
             },
             {
                 path: 'bookedForFreightConfirmationScreen',
                 name: 'BookedForFreightConfirmationScreen',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/src/BookedForFreightConfirmationScreen.vue'),
+                    import('@/stakeholderScreens/farmer/src/BookedForFreightConfirmationScreen.vue'),
             },
             {
                 path: 'bookedForSupplierConfirmationScreen',
                 name: 'BookedForSupplierConfirmationScreen',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/src/BookedForSupplierConfirmationScreen.vue'),
+                    import('@/stakeholderScreens/farmer/src/BookedForSupplierConfirmationScreen.vue'),
             },
             {
                 path: 'submittedBids/bidStatus',
@@ -806,7 +806,7 @@ children: [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidder/src/BidTrackStatus.vue'
+                        '@/stakeholderScreens/farmer/src/ProductTrackStatus.vue'
                     ),
             },
             {
@@ -814,14 +814,14 @@ children: [
                 name: 'Notifications',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/src/Notifications.vue'),
+                    import('@/stakeholderScreens/farmer/src/Notifications.vue'),
             },
             {
                 path: 'tendersList',
                 name: 'TendersList',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/bidder/src/TendersList.vue'),
+                    import('@/stakeholderScreens/farmer/src/TendersList.vue'),
             },
             {
                 path: 'activeTenders',
@@ -829,7 +829,7 @@ children: [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidder/src/ActiveTendersView.vue'
+                        '@/stakeholderScreens/farmer/src/ActiveTendersView.vue'
                     ),
             },
             {
@@ -838,7 +838,7 @@ children: [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidder/src/SubmitBid.vue'
+                        '@/stakeholderScreens/farmer/src/SubmitProduct.vue'
                     ),
             },
             {
@@ -847,7 +847,7 @@ children: [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidder/src/TenderDetailsForBidder.vue'
+                        '@/stakeholderScreens/farmer/src/TenderDetailsForBidder.vue'
                     ),
             },
         ],
@@ -887,7 +887,7 @@ children: [
             //     props: true,
             //     component: () =>
             //         import(
-            //             '@/stakeholderScreens/internationalBidder/src/BidTrackStatus.vue'
+            //             '@/stakeholderScreens/internationalBidder/src/ProductTrackStatus.vue'
             //             ),
             // },
             {
@@ -910,7 +910,7 @@ children: [
             //     props: true,
             //     component: () =>
             //         import(
-            //             '@/stakeholderScreens/bidder/src/ActiveTendersView.vue'
+            //             '@/stakeholderScreens/farmer/src/ActiveTendersView.vue'
             //             ),
             // },
             // {
@@ -919,7 +919,7 @@ children: [
             //     props: true,
             //     component: () =>
             //         import(
-            //             '@/stakeholderScreens/bidder/src/SubmitBid.vue'
+            //             '@/stakeholderScreens/farmer/src/SubmitProduct.vue'
             //             ),
             // },
             // {
@@ -928,7 +928,7 @@ children: [
             //     props: true,
             //     component: () =>
             //         import(
-            //             '@/stakeholderScreens/bidder/src/TenderDetailsForBidder.vue'
+            //             '@/stakeholderScreens/farmer/src/TenderDetailsForBidder.vue'
             //             ),
             // },
         ],

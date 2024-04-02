@@ -11,7 +11,7 @@
             <v-img
                 v-if="!miniVariant"
                 width="100%"
-                src="@/assets/img/nav-head.jpg"
+                src="@/assets/img/nav-head.png"
                 gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
             >
                 <v-row align="end">

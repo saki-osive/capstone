@@ -1,6 +1,6 @@
 <template>
     <v-app class="login">
-        <v-img aspect-ratio="2" src="@/assets/login_bg.jpg">
+        <v-img aspect-ratio="2" src="@/assets/login_bg.png">
             <v-card width="400" class="mx-auto mt-8">
                 <v-toolbar>
                     <v-toolbar-title class="pb-0">
@@ -95,8 +95,8 @@ export default {
                         let role = response.data.roles[0];
                         this.saveDataToLocalStorage(response.data);
                         switch (role) {
-                            case RoleConstants.ROLE_BIDDER:
-                                this.$router.push({ path: '/bidder' });
+                            case RoleConstants.ROLE_FARMER:
+                                this.$router.push({ path: '/farmer' });
                                 break;
                             case RoleConstants.ROLE_BIDDER_MANAGER:
                                 this.$router.push({ path: '/bidderManager' });
@@ -108,7 +108,7 @@ export default {
                                 this.$router.push({ path: '/tenderManager' });
                                 break;
                             case RoleConstants.ROLE_ADMIN:
-                                this.$router.push({ path: '/bidder' });
+                                this.$router.push({ path: '/farmer' });
                                 break;
                             case RoleConstants.ROLE_ONBOARDING:
                                 this.$router.push({ path: '/onboarding' });

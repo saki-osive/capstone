@@ -114,9 +114,9 @@
 </template>
 
 <script>
-import TenderInformation from '@/stakeholderScreens/bidder/src/bidSubmissionTabItems/TenderInformation.vue'
-import UploadDocuments from '@/stakeholderScreens/bidder/src/bidSubmissionTabItems/UploadDocuments.vue'
-import BillOfMaterial from '@/stakeholderScreens/bidder/src/bidSubmissionTabItems/BillOfMaterial.vue'
+import TenderInformation from '@/stakeholderScreens/farmer/src/bidSubmissionTabItems/TenderInformation.vue'
+import UploadDocuments from '@/stakeholderScreens/farmer/src/bidSubmissionTabItems/UploadDocuments.vue'
+import BillOfMaterial from '@/stakeholderScreens/farmer/src/bidSubmissionTabItems/BillOfMaterial.vue'
 
 
 export default {

@@ -1,7 +1,7 @@
 <template>
     <v-container app>
         <v-app-bar>
-            <img src="../assets/img/gaillogo.png" alt />
+            <img src="../assets/img/logo.png" alt />
             <v-toolbar-title>
                 <h1> Tenders</h1>
             </v-toolbar-title>
@@ -263,7 +263,7 @@ export default {
                 pOBoxLocation: '',
                 pOBoxCountry: '',
                 english: '',
-                roles:["ROLE_BIDDER"]
+                roles:["ROLE_FARMER"]
             },
           headers: [
             {
