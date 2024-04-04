@@ -81,11 +81,11 @@ TODO
 
 LotLock Capstone project is developed by:
 
-- **Sarthak Kaushik**
-  - *Student ID:* 101471600
-
 - **Pavani Miglani**
   - *Student ID:* 101517557
+ 
+- **Sarthak Kaushik**
+  - *Student ID:* 101471600
 
 
 
