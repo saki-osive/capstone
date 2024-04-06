@@ -81,11 +81,11 @@
                             <v-col cols="3" align="left">{{ this.tenderModel.referenceNumber }}</v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="5" align="right">Tender Type:</v-col>
+                            <v-col cols="5" align="right">Lot Type:</v-col>
                             <v-col cols="3" align="left">{{ this.tenderModel.type }}</v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="5" align="right">Tender Category:</v-col>
+                            <v-col cols="5" align="right">Lot Category:</v-col>
                             <v-col cols="3" align="left">{{ this.tenderModel.category }}</v-col>
                         </v-row>
 

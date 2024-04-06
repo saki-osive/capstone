@@ -45,7 +45,7 @@
                 <v-row justify="center" align="center" >
                     <v-btn text
                     :to="{name: 'Register'}"
-                     small>Request User ID (For New Bidders)</v-btn>
+                     small>Request User ID (For New Farmers)</v-btn>
                 </v-row>
             </v-card>
         </v-img>
@@ -98,13 +98,13 @@ export default {
                             case RoleConstants.ROLE_FARMER:
                                 this.$router.push({ path: '/farmer' });
                                 break;
-                            case RoleConstants.ROLE_BIDDER_MANAGER:
-                                this.$router.push({ path: '/bidderManager' });
+                            case RoleConstants.ROLE_PROCESSOR:
+                                this.$router.push({ path: '/processor' });
                                 break;
-                            case RoleConstants.ROLE_TENDER_CREATOR:
+                            case RoleConstants.ROLE_DISTRIBUTOR:
                                 this.$router.push({ path: '/tenderCreator' });
                                 break;
-                            case RoleConstants.ROLE_TENDER_MANAGER:
+                            case RoleConstants.ROLE_RETAILER:
                                 this.$router.push({ path: '/tenderManager' });
                                 break;
                             case RoleConstants.ROLE_ADMIN:
@@ -113,16 +113,16 @@ export default {
                             case RoleConstants.ROLE_ONBOARDING:
                                 this.$router.push({ path: '/onboarding' });
                                 break;
-                            case RoleConstants.ROLE_BID_EVALUATION_EXPERT:
+                            case RoleConstants.ROLE_CONSUMER:
                                 this.$router.push({ path: '/bidEvalExpert' });
                                 break;
-                            case RoleConstants.ROLE_BID_EVALUATION_CHAIRMAN:
+                            case RoleConstants.ROLE_GOVERNMENT:
                                 this.$router.push({ path: '/bidEvalChairman' });
                                 break;
                             case RoleConstants.ROLE_CVO:
                                 this.$router.push({ path: '/cvo' });
                                 break;
-                                case RoleConstants.ROLE_AUDIT:
+                                case RoleConstants.ROLE_SUSTAINABILITY_AUDITOR:
                                     this.$router.push({ path: '/auditorIndex' });
                                     break;
                             default:

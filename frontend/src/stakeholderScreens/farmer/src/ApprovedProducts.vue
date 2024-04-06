@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-toolbar class="blue lighten-2 mb-8">
-      <v-toolbar-title>My Approved Bids</v-toolbar-title>
+      <v-toolbar-title>My Approved Lots</v-toolbar-title>
     </v-toolbar>
     <v-data-table
         :headers="approvedBidsHeaders"
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-name: "ApprovedBids",
+name: "ApprovedProducts",
   data() {
     return {
       approvedBidsHeaders: [
@@ -44,7 +44,7 @@ name: "ApprovedBids",
           value: 'serialNumber',
         },
         {
-          text: 'Tender no.',
+          text: 'Lot no.',
           value: 'tenderNumber',
         },
         {

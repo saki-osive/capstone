@@ -17,7 +17,7 @@ import AppBar from '@/dashboard/layout/AppBar.vue'
 import Footer from '@/dashboard/layout/Footer.vue'
 
 export default {
-    name: 'BidderManagerIndex',
+    name: 'ProcessorIndex',
     methods: {
         changeMiniVariant() {
             this.miniVariant = !this.miniVariant
@@ -35,28 +35,27 @@ export default {
                 {
                     title: 'Dashboard',
                     icon: 'fa-home',
-                    route: { name: 'BidderDashboard' },
+                    route: { name: 'FarmerDashboard' },
                 },
                 {
-                    title: 'View Tenders For Bidding',
+                  title: 'View Lot Records',
+                  icon: ' fa-minus-square',
+                  route: { name: 'SubmittedProducts' },
+                },
+                {
+                    title: 'Create Lot Record',
                     icon: 'fa-list',
-                    route: { name: 'TendersList' },
+                    route: { name: 'LotRecordsList' },
                 },
                 {
-                    title: 'My Submitted Bids',
-                    icon: ' fa-minus-square',
-                    route: { name: 'SubmittedBids' },
+                  title: 'Verify Certifications',
+                  icon: 'fa-check-circle',
+                  route: { name: 'ApprovedProducts' },
                 },
-              {
-                title: 'Approved Bids',
-                icon: 'fa-check-circle',
-                route: { name: 'ApprovedBids' },
-              },
-
                 {
                     title: 'Profile',
                     icon: 'fa-users ',
-                    route: { name: 'BidderProfile' },
+                    route: { name: 'FarmerProfile' },
                 },
                 {
                     title: 'Notifications',

@@ -40,50 +40,54 @@ export default {
                 },
 
                 {
-                    title: 'Bidder',
-                    icon: 'fa-address-card',
-                    route: { name: 'BidderIndex' },
-                },
-                {
-                  title: 'InternationalBidder',
-                  icon: 'fa-circle',
-                  route: { name: 'InternationalBidderIndex' },
-                },
-
-                {
-                    title: 'Bidder Manager',
-                    icon: 'fa-cube',
-                    route: { name: 'BidderManagerIndex' },
-                },
-
-                {
-                    title: 'CVO ',
-                    icon: 'fa-users ',
-                    route: { name: 'CVOIndex' },
-                },
-                {
-                    title: 'OnBoarding',
-                    icon: 'fa-address-card',
-                    route: { name: 'OnBoardingIndex' },
-                },
-                {
-                    title: 'Tender Manager',
-                    icon: 'fa-binoculars',
-                    route: { name: 'TenderManagerIndex' },
-                },
-                {
-                    title: 'Tender Creator',
+                    title: 'Farmer',
                     icon: 'fa-plus',
-                    route: { name: 'TenderCreatorIndex' },
+                    route: { name: 'FarmerIndex' },
+                },
+                // {
+                //   title: 'InternationalBidder',
+                //   icon: 'fa-circle',
+                //   route: { name: 'InternationalBidderIndex' },
+                // },
+
+                {
+                    title: 'Processor',
+                    icon: 'fa-cube',
+                    route: { name: 'ProcessorIndex' },
                 },
 
                 {
-                    title: 'Bid Evaluation Expert',
-                    icon: ' fa-flask',
+                  title: 'Distributor',
+                  icon: 'fa-cube',
+                  route: { name: 'TenderCreatorIndex' },
+                },
+
+                {
+                  title: 'Retailer',
+                  icon: 'fa-cube',
+                  route: { name: 'TenderManagerIndex' },
+                },
+
+                {
+                    title: 'Consumer',
+                    icon: ' fa-binoculars', //fa-flask
                     route: { name: 'BidEvalExpert' },
                 },
+
                 {
-                    title: 'Bid Evaluation Chairman',
+                  title: 'OnBoarding',
+                  icon: 'fa-users',
+                  route: { name: 'OnBoardingIndex' },
+                },
+
+
+                {
+                  title: 'CVO ',
+                  icon: 'fa-address-card',
+                  route: { name: 'CVOIndex' },
+                },
+                {
+                    title: 'Government',
                     icon: 'fa-id-card',
                     route: { name: 'BidEvalChairman' },
                 },
@@ -92,21 +96,21 @@ export default {
                   icon: 'fa-id-card',
                   route: { name: 'AuditorIndex' },
                 },
-                {
-                    title: 'Freight Forwarder',
-                    icon: 'fa-id-card',
-                    route: { name: 'FreightIndex' },
-                },
-                {
-                    title: 'Shipper',
-                    icon: 'fa-id-card',
-                    route: { name: 'ShipperIndex' },
-                },
-              {
-                title: 'Clearing Agency',
-                icon: ' fa-check-circle',
-                route: { name: 'ClearingAgencyIndex' },
-              },
+                // {
+                //     title: 'Freight Forwarder',
+                //     icon: 'fa-id-card',
+                //     route: { name: 'FreightIndex' },
+                // },
+                // {
+                //     title: 'Shipper',
+                //     icon: 'fa-id-card',
+                //     route: { name: 'ShipperIndex' },
+                // },
+                // {
+                //   title: 'Clearing Agency',
+                //   icon: ' fa-check-circle',
+                //   route: { name: 'ClearingAgencyIndex' },
+                // },
             ],
         }
     },

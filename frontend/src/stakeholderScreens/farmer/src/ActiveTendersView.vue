@@ -84,7 +84,7 @@ export default {
                 },
 
                 {
-                    text: 'Tender Subject',
+                    text: 'Lot Subject',
                     value: 'title',
                 },
 

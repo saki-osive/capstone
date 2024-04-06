@@ -1,7 +1,7 @@
 <template>
     <v-div >
         <v-toolbar class="blue lighten-2 mb-8">
-            <v-toolbar-title>Submitted Bids</v-toolbar-title>
+            <v-toolbar-title>Submitted Products</v-toolbar-title>
         </v-toolbar>
  <v-div class="mx-12 px-12">
         <v-row>
@@ -104,39 +104,39 @@ export default {
         return {
             dialog: false,
             search: '',
-            items: ['Active Tenders', 'Inactive Tenders'],
+            items: ['Active Lot Records', 'Inactive Lot Records'],
 
             covers: [
                 {
-                    title: 'Notice for tender supply Moulded grating ',
+                    title: 'Notice for Lot supply Moulded grating ',
                     odate: '4-12-2011',
                     cdate: '9-12-2001',
                 },
                 {
-                    title: 'Notice for tender supply for d1, d2 and d3 ',
+                    title: 'Notice for Lot supply for d1, d2 and d3 ',
 
                     odate: '9-12-2001',
                     cdate: '29-1-2002',
                 },
                 {
-                    title: 'Notice for tender supply  CWEk-31/2019-20',
+                    title: 'Notice for Lot supply  CWEk-31/2019-20',
                     odate: '29-12-2001',
                     cdate: '9-2-2002',
                 },
 
                 {
-                    title: 'Notice for tender supply Moulded grating ',
+                    title: 'Notice for Lot supply Moulded grating ',
                     odate: '4-12-2011',
                     cdate: '9-12-2001',
                 },
                 {
-                    title: 'Notice for tender supply for d1, d2 and d3 ',
+                    title: 'Notice for Lot supply for d1, d2 and d3 ',
 
                     odate: '9-12-2001',
                     cdate: '29-1-2002',
                 },
                 {
-                    title: 'Notice for tender supply  CWEk-31/2019-20',
+                    title: 'Notice for Lot supply  CWEk-31/2019-20',
                     odate: '29-12-2001',
                     cdate: '9-2-2002',
                 },
@@ -160,7 +160,7 @@ export default {
                     value: 'status',
                 },
                 {
-                    text: 'Withdraw Bid',
+                    text: 'Withdraw Product',
                     value: 'withdraw',
                 },
             ],

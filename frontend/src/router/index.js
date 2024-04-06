@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '@/views/Login.vue'
-import BidderManagerIndex from '@/stakeholderScreens/bidderManager/BidderManagerIndex.vue'
+import ProcessorIndex from '@/stakeholderScreens/processor/ProcessorIndex.vue'
 import OnBoardingIndex from '@/stakeholderScreens/onBoarding/OnBoardingIndex.vue'
 
 Vue.use(VueRouter)
@@ -31,10 +31,10 @@ const routes = [
         props: true,
     },
     {
-        path: '/bidderManager',
-        name: 'BidderManagerIndex',
+        path: '/processor',
+        name: 'ProcessorIndex',
         props: true,
-        component: BidderManagerIndex,
+        component: ProcessorIndex,
         children: [
             {
                 path: 'dashboard',
@@ -42,7 +42,7 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidderManager/BidderManagerDashboard.vue'
+                        '@/stakeholderScreens/processor/BidderManagerDashboard.vue'
                     ),
             },
             {
@@ -51,16 +51,16 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidderManager/src/addBidder/AddBidder.vue'
+                        '@/stakeholderScreens/processor/src/addBidder/AddBidder.vue'
                     ),
             },
             {
-                path: 'bidderadded',
+                path: 'bidderAdded',
                 name: 'BidderAdded',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidderManager/src/addBidder/BidderAdded.vue'
+                        '@/stakeholderScreens/processor/src/addBidder/BidderAdded.vue'
                     ),
             },
             {
@@ -69,7 +69,7 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidderManager/src/ViewAll.vue'
+                        '@/stakeholderScreens/processor/src/ViewAll.vue'
                     ),
             },
             {
@@ -78,7 +78,7 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidderManager/src/pendingForReview/BidderDetail.vue'
+                        '@/stakeholderScreens/processor/src/pendingForReview/BidderDetail.vue'
                     ),
             },
             {
@@ -87,7 +87,7 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidderManager/src/pendingForReview/PendingForReview.vue'
+                        '@/stakeholderScreens/processor/src/pendingForReview/PendingForReview.vue'
                     ),
             },
             {
@@ -96,7 +96,7 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidderManager/src/pendingForReview/BidderRegistered.vue'
+                        '@/stakeholderScreens/processor/src/pendingForReview/BidderRegistered.vue'
                     ),
             },
             {
@@ -105,7 +105,7 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidderManager/src/SuspendedBidders.vue'
+                        '@/stakeholderScreens/processor/src/SuspendedBidders.vue'
                     ),
             },
         ],
@@ -740,34 +740,34 @@ children: [
     //Farmer
     {
         path: '/farmer',
-        name: 'BidderIndex',
+        name: 'FarmerIndex',
         props: true,
         component: () => import('@/stakeholderScreens/farmer/FarmerIndex.vue'),
         children: [
             {
                 path: 'dashboard',
-                name: 'BidderDashboard',
+                name: 'FarmerDashboard',
                 props: true,
                 component: () =>
                     import('@/stakeholderScreens/farmer/FarmerDashboard.vue'),
             },
             {
                 path: 'profile',
-                name: 'BidderProfile',
+                name: 'FarmerProfile',
                 props: true,
                 component: () =>
                     import('@/stakeholderScreens/farmer/src/FarmerProfile.vue'),
             },
             {
-                path: 'submittedBids',
-                name: 'SubmittedBids',
+                path: 'submittedProducts',
+                name: 'SubmittedProducts',
                 props: true,
                 component: () =>
                     import('@/stakeholderScreens/farmer/src/submittedProducts.vue'),
             },
             {
-                path: 'approvedBids',
-                name: 'ApprovedBids',
+                path: 'approvedProducts',
+                name: 'ApprovedProducts',
                 props: true,
                 component: () =>
                     import('@/stakeholderScreens/farmer/src/ApprovedProducts.vue'),
@@ -801,8 +801,8 @@ children: [
                     import('@/stakeholderScreens/farmer/src/BookedForSupplierConfirmationScreen.vue'),
             },
             {
-                path: 'submittedBids/bidStatus',
-                name: 'BidTrackStatus',
+                path: 'submittedBids/productStatus',
+                name: 'ProductTrackStatus',
                 props: true,
                 component: () =>
                     import(
@@ -817,11 +817,11 @@ children: [
                     import('@/stakeholderScreens/farmer/src/Notifications.vue'),
             },
             {
-                path: 'tendersList',
-                name: 'TendersList',
+                path: 'lotRecordsList',
+                name: 'LotRecordsList',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/farmer/src/TendersList.vue'),
+                    import('@/stakeholderScreens/farmer/src/LotRecordsList.vue'),
             },
             {
                 path: 'activeTenders',

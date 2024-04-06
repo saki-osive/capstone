@@ -54,7 +54,7 @@ export default {
                     this.statusOfSubmittedList = response.data;
                     this.showNotification("Success","Fetched all tenders.")
                 }else {
-                    this.showNotification("Note","No tenders available.","info")
+                    this.showNotification("Note","No lot records available.","info")
                 }
 
             }, (error) => {

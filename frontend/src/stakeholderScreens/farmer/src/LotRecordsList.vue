@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-toolbar class="blue lighten-2 mb-8">
-            <h1 class="mx-auto">Tenders</h1>
+            <h1 class="mx-auto">Lot Records</h1>
         </v-toolbar>
         <v-row>
             <v-col>
@@ -30,7 +30,7 @@
                 class="ml-8 mb-4"
                 text
                 
-            >Active Tenders</v-btn>
+            >Active Lot Records</v-btn>
         </v-row>
 
         <br />
@@ -51,7 +51,7 @@
 import {TenderTableHeaders} from "../../tenderCreator/datasource/TenderTableHeaders";
 
 export default {
-    name: "TenderList",
+    name: "LotRecordsList",
     mounted() {
 
         let loader = this.$loading.show({
@@ -67,13 +67,13 @@ export default {
                     this.covers = response.data;
                     this.showNotification("Success","Fetched all tenders.")
                 }else {
-                    this.showNotification("Note","No tenders available.","info")
+                    this.showNotification("Note","No lot records available.","info")
                 }
 
             }, (error) => {
                 loader.hide()
                 console.log(error)
-                this.showNotification("Error","No tenders available.","error")
+                this.showNotification("Error","No lot records available.","error")
             });
 
     },

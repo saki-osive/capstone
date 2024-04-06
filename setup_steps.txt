@@ -8,16 +8,16 @@ use bezkoder_db
 
 
 db.roles.insertMany([
-   { name: "ROLE_BIDDER" },
-   { name: "ROLE_BIDDER_MANAGER" },
-   { name: "ROLE_TENDER_CREATOR" },
-   { name: "ROLE_TENDER_MANAGER" },
+   { name: "ROLE_FARMER" },
+   { name: "ROLE_PROCESSOR" },
+   { name: "ROLE_DISTRIBUTOR" },
+   { name: "ROLE_RETAILER" },
    { name: "ROLE_ADMIN" },
    { name: "ROLE_ONBOARDING" },
-   { name: "ROLE_BID_EVALUATION_EXPERT" },
-   { name: "ROLE_BID_EVALUATION_CHAIRMAN" },
+   { name: "ROLE_CONSUMER" },
+   { name: "ROLE_GOVERNMENT" },
    { name: "ROLE_CVO" },
-   { name: "ROLE_AUDIT" }
+   { name: "ROLE_SUSTAINABILITY_AUDITOR" }
 ])
 
 
@@ -27,15 +27,15 @@ Minio Setup
 docker run \
   -p 9000:9000 \
   -p 9001:9001 \
-  -e "MINIO_ROOT_USER=tekvy1234" \
-  -e "MINIO_ROOT_PASSWORD=tekvy1234" \
+  -e "MINIO_ROOT_USER=root" \
+  -e "MINIO_ROOT_PASSWORD=Qwerty@321" \
   quay.io/minio/minio:RELEASE.2022-01-25T19-56-04Z server /data --console-address ":9001"
 
 
 Vue.js - Frontend 
 ============================
 
-npm install
+npm install --legacy-peer-deps
 npm run serve
 
 

@@ -3,11 +3,11 @@
 export const TenderTableHeaders = {
     header: [
         {
-            text: 'Tender Id',
+            text: 'Lot Id',
             value: 'id',
         },
         {
-            text: 'Tender Name',
+            text: 'Lot Name',
             value: 'scopeOfWork',
         },
         {
@@ -23,7 +23,7 @@ export const TenderTableHeaders = {
             value: 'category',
         },
         {
-            text: 'Bidding System',
+            text: 'Product Id',
             value: 'typeOfBiddingSystem',
         },
         {

@@ -2,7 +2,7 @@
     <v-app-bar absolute app flat>
         <v-app-bar-nav-icon @click="toMiniVariant"></v-app-bar-nav-icon>
 
-        <v-toolbar-title>Tenders</v-toolbar-title>
+        <v-toolbar-title>Lot Records</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-avatar color="blue" size="36">
             <v-icon dark>mdi-account-circle</v-icon>

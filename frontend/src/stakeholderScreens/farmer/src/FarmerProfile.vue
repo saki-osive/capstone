@@ -1,7 +1,7 @@
 <template>
     <v-div>
         <v-toolbar class="blue lighten-2 mb-4">
-            <v-toolbar-title>Bidder Profile</v-toolbar-title>
+            <v-toolbar-title>Farmer Profile</v-toolbar-title>
         </v-toolbar>
         <v-div class="ml-12 pl-12">
             <v-form>

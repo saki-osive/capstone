@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-toolbar class="blue lighten-2 mb-8">
-            <v-toolbar-title>Track Bid Status</v-toolbar-title>
+            <v-toolbar-title>Track Product Status</v-toolbar-title>
         </v-toolbar>
 
         <v-stepper v-model="e13" vertical>
@@ -10,11 +10,11 @@
             <v-stepper-content step="1"></v-stepper-content>
 
                 <v-stepper-step step="2" complete
-                    >BID Registered</v-stepper-step
+                    >Product Registered</v-stepper-step
                 >
                 <v-stepper-content step="2"></v-stepper-content>
 
-            <v-stepper-step step="3">Bid Confirmation: IN PROGRESS</v-stepper-step>
+            <v-stepper-step step="3">Product Confirmation: IN PROGRESS</v-stepper-step>
 
                 <v-stepper-content step="1">
                     <v-card
@@ -24,8 +24,8 @@
                     ></v-card>
                 </v-stepper-content>
 
-            <v-stepper-step step="4">Bid Reviewed by Manager</v-stepper-step>
-            <v-stepper-step step="5">Bid Evaluation Result</v-stepper-step>
+            <v-stepper-step step="4">Product Reviewed by Manager</v-stepper-step>
+            <v-stepper-step step="5">Product Evaluation Result</v-stepper-step>
         </v-stepper>
 
         <div class="text-center">
@@ -43,7 +43,7 @@
 
 <script>
 export default {
-    name: "BidTrackStatus",
+    name: "ProductTrackStatus",
     data() {
         return {
             e13: 3,

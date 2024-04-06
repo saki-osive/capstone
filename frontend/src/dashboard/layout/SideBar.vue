@@ -2,7 +2,7 @@
     <div>
         <v-navigation-drawer
             v-model="drawer"
-            color="#bd5c38"
+            color="#36454f"
             :mini-variant="miniVariant"
             app
             fixed

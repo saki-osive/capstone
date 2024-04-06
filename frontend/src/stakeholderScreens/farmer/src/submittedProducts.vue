@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-toolbar class="blue lighten-2 mb-8">
-            <v-toolbar-title>Select Bid</v-toolbar-title>
+            <v-toolbar-title>Select Product</v-toolbar-title>
         </v-toolbar>
         <v-data-table
             :headers="headers"
@@ -41,7 +41,7 @@
 
 <script>
 export default {
-    name: 'SubmittedBids',
+    name: 'SubmittedProducts',
     methods:{
 
         onTechDownloadClicked(item){
@@ -104,28 +104,28 @@ export default {
                     this.submittedTendersList = response.data;
                     this.showNotification("Success","Fetched all bids.")
                 }else {
-                    this.showNotification("Note","No bids available.","info")
+                    this.showNotification("Note","No products available.","info")
                 }
 
             }, (error) => {
                 loader.hide()
                 console.log(error)
-                this.showNotification("Error","No bids available.","error")
+                this.showNotification("Error","No products available.","error")
             });
     },
     data() {
         return {
             headers: [
                 {
-                    text: 'Bid Id',
+                    text: 'Product Id',
                     value: 'id',
                 },
                 {
-                    text: 'Tender Name',
+                    text: 'Lot Name',
                     value: 'tender.scopeOfWork',
                 },
                 {
-                    text: 'Tender Category',
+                    text: 'Lot Category',
                     value: 'tender.category',
                 },
                 {

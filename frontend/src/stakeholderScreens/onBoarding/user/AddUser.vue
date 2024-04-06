@@ -119,13 +119,13 @@ export default {
             },
             userStatusDataArray: ['Enable', 'Disable'],
             userRoleDataArray: [
-                'ROLE_BIDDER_MANAGER',
-                'ROLE_TENDER_CREATOR',
-                'ROLE_TENDER_MANAGER',
+                'ROLE_PROCESSOR',
+                'ROLE_DISTRIBUTOR',
+                'ROLE_RETAILER',
                 'ROLE_ADMIN',
                 'ROLE_ONBOARDING',
-                'ROLE_BID_EVALUATION_EXPERT',
-                'ROLE_BID_EVALUATION_CHAIRMAN',
+                'ROLE_CONSUMER',
+                'ROLE_GOVERNMENT',
                 'ROLE_CVO',
             ],
         }

@@ -2,20 +2,20 @@
     <v-container>
         <v-card class="grey lighten-4 pa-8">
 
-            <h3>Display Tender :  {{this.tender.id}}</h3>
+            <h3>Display Lot Record :  {{this.tender.id}}</h3>
             <v-row class="pa-4">
                 <div>
-                    Tender Reference Number :  {{this.tender.referenceNumber}}
+                    Lot Reference Number :  {{this.tender.referenceNumber}}
                     <br>
-                    Tender Name   :   {{this.tender.scopeOfWork}}
+                    Lot Name   :   {{this.tender.scopeOfWork}}
                     <br>
-                    Tender Status  :  PUBLISHED
+                    Lot Status  :  PUBLISHED
                     <br>
-                    Tender Start Date  :  {{tenderStartDate}}
+                    Lot Start Date  :  {{tenderStartDate}}
                     <br>
                     Submission Deadline : {{this.tender.dueDateForBidSubmission}}
                     <br>
-                    Tender Owner  :  {{this.tender.contactName}}
+                    Lot Owner  :  {{this.tender.contactName}}
                 </div>
             </v-row>
             <br>
@@ -32,8 +32,8 @@
             <v-tabs background-color="blue" centered dark text>
                 <v-tabs-slider></v-tabs-slider>
 
-                <v-tab>Tender Details</v-tab>
-                <v-tab>Tender Documents</v-tab>
+                <v-tab>Lot Record Details</v-tab>
+                <v-tab>Lot Documents</v-tab>
 
                 <v-tab-item >
                     <v-card flat>
@@ -47,19 +47,19 @@
                                     <v-col cols="3" align="left">{{ this.tender.scopeOfWork }}</v-col>
                                 </v-row>
                                 <v-row>
-                                    <v-col cols="5" align="right">Tender Reference Number and Date :</v-col>
+                                    <v-col cols="5" align="right">Lot Reference Number and Date :</v-col>
                                     <v-col cols="3" align="left">{{ this.tender.referenceNumber }}</v-col>
                                 </v-row>
                                 <v-row>
-                                    <v-col cols="5" align="right">Tender Opening Date:</v-col>
+                                    <v-col cols="5" align="right">Lot Opening Date:</v-col>
                                     <v-col cols="3" align="left">{{ this.tender.referenceDate }}</v-col>
                                 </v-row>
                                 <v-row>
-                                    <v-col cols="5" align="right">Type of Bidding System:</v-col>
+                                    <v-col cols="5" align="right">Type of Lot System:</v-col>
                                     <v-col cols="3" align="left">{{ this.tender.typeOfBiddingSystem }}</v-col>
                                 </v-row>
                                 <v-row>
-                                    <v-col cols="5" align="right">Tender Type:</v-col>
+                                    <v-col cols="5" align="right">Lot Type:</v-col>
                                     <v-col cols="3" align="left">{{ this.tender.type }}</v-col>
                                 </v-row>
                                 <v-row>
@@ -71,7 +71,7 @@
                                     <v-col cols="3" align="left">{{ this.tender.numberOfCover }}</v-col>
                                 </v-row>
                                 <v-row>
-                                    <v-col cols="5" align="right">Tender Category:</v-col>
+                                    <v-col cols="5" align="right">Lot Category:</v-col>
                                     <v-col cols="3" align="left">{{ this.tender.category }}</v-col>
                                 </v-row>
                                 <v-row>

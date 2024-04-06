@@ -17,7 +17,7 @@ import AppBar from '@/dashboard/layout/AppBar.vue'
 import Footer from '@/dashboard/layout/Footer.vue'
 
 export default {
-    name: 'BidderManagerindex',
+    name: 'ProcessorIndex',
     methods: {
         changeMiniVariant() {
             this.miniVariant = !this.miniVariant
