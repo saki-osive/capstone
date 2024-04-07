@@ -437,11 +437,11 @@ const routes = [
 
     // Bid Evaluation Expert
     {
-        path: '/bidEvalExpert',
+        path: '/consumer',
         name: 'BidEvalExpert',
         props: true,
         component: () =>
-            import('@/stakeholderScreens/bidEvalExpert/bidEvalExpertIndex.vue'),
+            import('@/stakeholderScreens/consumer/bidEvalExpertIndex.vue'),
         children: [
             {
                 path: 'assignedBids',
@@ -449,10 +449,24 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvalExpert/src/AssignedBids.vue'
+                        '@/stakeholderScreens/consumer/src/AssignedBids.vue'
                     ),
             },
 
+            {
+                path: 'profile',
+                name: 'ConsumerProfile',
+                props: true,
+                component: () =>
+                    import('@/stakeholderScreens/consumer/src/ConsumerProfile.vue'),
+            },
+            {
+                path: 'notifications',
+                name: 'Notifications',
+                props: true,
+                component: () =>
+                    import('@/stakeholderScreens/consumer/src/Notifications.vue'),
+            },
 
             {
                 path: 'ExpertDashboard',
@@ -460,7 +474,7 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvalExpert/ExpertDashboard.vue'
+                        '@/stakeholderScreens/consumer/ConsumerDashboard.vue'
                     ),
             },
 
@@ -470,7 +484,7 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvalExpert/src/ReviewTechnicalBid.vue'
+                        '@/stakeholderScreens/consumer/src/ReviewTechnicalBid.vue'
                     ),
             },
 
@@ -480,7 +494,7 @@ const routes = [
                 name: 'ReviewFinancialBid',
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvalExpert/src/ReviewFinancialBid.vue'
+                        '@/stakeholderScreens/consumer/src/ReviewFinancialBid.vue'
                     ),
             },
 
@@ -490,7 +504,7 @@ const routes = [
             //     name: 'ReviewBid',
             //     component: () =>
             //         import(
-            //             '@/stakeholderScreens/bidEvalExpert/src/ReviewBid.vue'
+            //             '@/stakeholderScreens/consumer/src/ReviewBid.vue'
             //         ),
             //     children: [
             //         {
@@ -498,7 +512,7 @@ const routes = [
             //             name: 'AdministrativeEval',
             //             component: () =>
             //                 import(
-            //                     '@/stakeholderScreens/bidEvalExpert/src/reviewBid/AdministrativeEval.vue'
+            //                     '@/stakeholderScreens/consumer/src/reviewBid/AdministrativeEval.vue'
             //                 ),
             //         },
             //         {
@@ -506,7 +520,7 @@ const routes = [
             //             name: 'TechnicalEval',
             //             component: () =>
             //                 import(
-            //                     '@/stakeholderScreens/bidEvalExpert/src/reviewBid/TechnicalEval.vue'
+            //                     '@/stakeholderScreens/consumer/src/reviewBid/TechnicalEval.vue'
             //                 ),
             //         },
             //         {
@@ -514,7 +528,7 @@ const routes = [
             //             name: 'FinalcialEval',
             //             component: () =>
             //                 import(
-            //                     '@/stakeholderScreens/bidEvalExpert/src/reviewBid/FinancialEval.vue'
+            //                     '@/stakeholderScreens/consumer/src/reviewBid/FinancialEval.vue'
             //                 ),
             //         },
             //         {
@@ -522,7 +536,7 @@ const routes = [
             //             name: 'PerformanceBidEval',
             //             component: () =>
             //                 import(
-            //                     '@/stakeholderScreens/bidEvalExpert/src/reviewBid/Performance.vue'
+            //                     '@/stakeholderScreens/consumer/src/reviewBid/Performance.vue'
             //                 ),
             //         },
             //         {
@@ -530,7 +544,7 @@ const routes = [
             //             name: 'AwardCertificate',
             //             component: () =>
             //                 import(
-            //                     '@/stakeholderScreens/bidEvalExpert/src/reviewBid/AwardCertificate.vue'
+            //                     '@/stakeholderScreens/consumer/src/reviewBid/AwardCertificate.vue'
             //                 ),
             //         },
             //     ],

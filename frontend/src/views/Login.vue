@@ -114,7 +114,7 @@ export default {
                                 this.$router.push({ path: '/onboarding' });
                                 break;
                             case RoleConstants.ROLE_CONSUMER:
-                                this.$router.push({ path: '/bidEvalExpert' });
+                                this.$router.push({ path: '/consumer' });
                                 break;
                             case RoleConstants.ROLE_GOVERNMENT:
                                 this.$router.push({ path: '/bidEvalChairman' });

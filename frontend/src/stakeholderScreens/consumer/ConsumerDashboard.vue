@@ -3,7 +3,7 @@
         <v-row>
             <v-col cols="12">
                 <v-row align="start" justify="center" class="grey lighten-5" style="height: 100px;">
-                    <v-card class="ma-3 pa-6" outlined tile>110 Assigned Bids</v-card>
+                    <v-card class="ma-3 pa-6" outlined tile>50 Products Tracked</v-card>
                     <v-card class="ma-3 pa-6" outlined tile>25 Pending reviews</v-card>
                 </v-row>
             </v-col>
@@ -25,10 +25,10 @@
                     ></v-sparkline>
 
                     <v-card-text class="pt-0">
-                        <div class="title font-weight-light mb-2">Assigned Bids</div>
+                        <div class="title font-weight-light mb-2">Tracked Products</div>
                         <div
                             class="subheading font-weight-light grey--text"
-                        >Assigned Bids in month of July</div>
+                        >Tracked Products in month of March</div>
                         <v-divider class="my-2"></v-divider>
                         <v-icon class="mr-2" small>mdi-clock</v-icon>
                         <span
@@ -56,10 +56,10 @@
                     </v-sheet>
 
                     <v-card-text class="pt-0">
-                        <div class="title font-weight-light mb-2">Total Bids</div>
+                        <div class="title font-weight-light mb-2">Total Lot Records</div>
                         <div
                             class="subheading font-weight-light grey--text"
-                        >Total Bids assigned in june and july</div>
+                        >Total Lot Records Tracked in Feb and March</div>
                         <v-divider class="my-2"></v-divider>
                         <v-icon class="mr-2" small>mdi-clock</v-icon>
                         <span
@@ -78,7 +78,7 @@
                         :width="25"
                         :value="80"
                         color="teal"
-                    >Bids Reviewed</v-progress-circular>
+                    >Supply Chain Tracked</v-progress-circular>
                 </v-card>
             </v-col>
 
@@ -89,10 +89,10 @@
                     :width="25"
                     value="3"
                     color="red"
-                >Bids Expired </v-progress-circular>
+                >Expired Transactions </v-progress-circular>
             </v-col>
-           
-           
+
+
 
 <v-col cols="12" sm="6" lg="3" class="ml-12">
                 <v-card flat>
@@ -102,7 +102,7 @@
                         :width="25"
                         :value="Pvalue+0"
                         color="orange"
-                    >Pending Reviews</v-progress-circular>
+                    >Awaiting Validation</v-progress-circular>
                 </v-card>
             </v-col>
 

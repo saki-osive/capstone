@@ -39,13 +39,35 @@ export default {
                     route: {name: 'ExpertDashboard'},
                 },
                 {
-                    title: 'Assigned Bids',
-                    icon: 'fa-square',
+                    title: 'Track Product Journey',
+                    icon: 'fa-cube',
                     route: { name: 'AssignedBids' },
                 },
-
-
-
+                {
+                  title: 'View Product Details',
+                  icon: 'fa-binoculars',
+                  route: {name: 'ExpertDashboard'},
+                },
+                {
+                  title: 'Provide Feedback',
+                  icon: 'fa-square',
+                  route: { name: 'AssignedBids' },
+                },
+                {
+                  title: 'Access Educational Content',
+                  icon: 'fa-id-card',
+                  route: {name: 'ExpertDashboard'},
+                },
+                {
+                  title: 'Profile',
+                  icon: 'fa-users ',
+                  route: { name: 'ConsumerProfile' },
+                },
+                {
+                  title: 'Notifications',
+                  icon: 'fa-bell',
+                  route: { name: 'Notifications' },
+                },
 
 
             ],

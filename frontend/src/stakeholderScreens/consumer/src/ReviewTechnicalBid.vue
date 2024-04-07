@@ -95,7 +95,7 @@
 </template>
 
 <script>
-import TechnicalDocumentEvaluation from '@/stakeholderScreens/bidEvalExpert/src/reviewTechnicalBidTabItems/TechnicalDocumentEvaluation.vue'
+import TechnicalDocumentEvaluation from '@/stakeholderScreens/consumer/src/reviewTechnicalBidTabItems/TechnicalDocumentEvaluation.vue'
 
 export default {
     name: 'ReviewBids',
