@@ -83,10 +83,11 @@ export default {
             this.$router.replace({name:"Login"})
         },
         onListItemClicked(item){
-            if (item.route){
-
-                this.$router.push(item.route)
-            }
+          this.$router.push(item.route).catch(() => {});
+            // if (item.route){
+            //
+            //     this.$router.push(item.route)
+            // }
         }
     },
     props: {
