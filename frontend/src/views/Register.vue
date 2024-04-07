@@ -3,24 +3,24 @@
         <v-app-bar>
             <img src="../assets/img/logo.png" alt />
             <v-toolbar-title>
-                <h1> Tenders</h1>
+                <h1> LotLock</h1>
             </v-toolbar-title>
         </v-app-bar>
         <v-card absolute flat color="#FFFFFF">
             <div>
-                <h2 align="center">Welcome to e-Procurement Portal</h2>
+                <h2 align="center">Welcome to LotLock Supply Chain Portal</h2>
             </div>
         </v-card>
         <div>
             <p align="center" class="font-weight-black">
-                Bidder Self Registration For  Tenders
+                Self Registration
             </p>
             <p align="center">*Required</p>
             <p align="center" class="font-weight-black">Company Details</p>
         </div>
         <v-card width="70%" class="mx-auto mt-12" align="center">
             <v-form>
-                <h1>Add New User</h1>
+                <h2>Add New User</h2>
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
@@ -60,7 +60,7 @@
 
                     <v-col>
                         <v-select
-                            label="-select-"
+                            label="-Select-"
                             :items="languageItems"
                             v-model="input.language"
                             outlined
@@ -90,10 +90,18 @@
                         </v-subheader>
                     </v-col>
                     <v-col>
-                        <v-text-field
-                                v-model="input.password"
-                                outlined
-                        ></v-text-field>
+                      <v-text-field
+                          :type="showPassword ? 'text' : 'password'"
+                          label="Password"
+                          v-model="inputPassword.password"
+                          prepend-icon="fa-lock"
+                          :append-icon="
+                                showPassword ? 'fa-eye' : 'fa-eye-slash'
+                            "
+                          @click:append="showPassword = !showPassword"
+                          text--primary
+                          required
+                      />
                     </v-col>
                 </v-row>
 
@@ -161,24 +169,24 @@
               <v-row>
                 <v-col cols="3">
                   <v-subheader>
-                    Bidder Type
+                    User Type
                     <span class="red--text">*</span>
                   </v-subheader>
                 </v-col>
                 <v-col>
                   <v-select
                       label="-select-"
-                      v-model="typeOfBidder"
-                      :items="countryArray"
+                      v-model="userType"
+                      :items="typeOfUser"
                       outlined
                   ></v-select>
 
                 </v-col>
               </v-row>
-              <v-row v-show="typeOfBidder === 'Domestic Bidder'">
+              <v-row v-show="userType === 'Farmer'">
                 <v-card color="grey lighten-1" class="mx-auto" outlined>
-                  <v-card-title class="justify-center">Documents Upload for Domestic Bidder</v-card-title>
-                  <v-data-table :headers="headers" :items="coverDomesticBidder">
+                  <v-card-title class="justify-center">Documents Upload for Farmer</v-card-title>
+                  <v-data-table :headers="headers" :items="farmer">
                     <template v-slot:item.adddoc="{ item }">
                       <v-file-input ref="inputUpload" v-model="item.file"  v-on:change="handleFileUpload(item)" dense></v-file-input>
                     </template>
@@ -186,10 +194,10 @@
                 </v-card>
               </v-row>
 
-              <v-row v-show="typeOfBidder === 'International Bidder'">
+              <v-row v-show="userType === 'Processor'">
                 <v-card color="grey lighten-1" class="mx-auto" outlined>
-                  <v-card-title class="justify-center">Documents Upload for International Bidder</v-card-title>
-                  <v-data-table :headers="headers" :items="coverInternationalBidder">
+                  <v-card-title class="justify-center">Documents Upload for Processor</v-card-title>
+                  <v-data-table :headers="headers" :items="processor">
                     <template v-slot:item.adddoc="{ item }">
                       <v-file-input ref="inputUpload" v-model="item.file"  v-on:change="handleFileUpload(item)" dense></v-file-input>
                     </template>
@@ -213,7 +221,7 @@
                 </v-row>
                 <v-row>
                     <v-col>
-                        Scanned copy of the certificate of Incoporation / GSt
+                        Scanned copy of the certificate of Incoporation / GST
                         Registration Certificate
                     </v-col>
                 </v-row>
@@ -242,12 +250,20 @@ export default {
     name: 'Register',
     data() {
         return {
-            countryArray: [
-                'Domestic Bidder',
-                'International Bidder',
+
+          showPassword: 'true',
+          inputPassword: {
+            email: null,
+            password: null,
+          },
+            typeOfUser: [
+                'Farmer',
+                'Processor',
+                'Distributor',
+                'Retailer',
             ],
-            typeOfBidder:"",
-            languageItems: ['English', 'Hindi'],
+            userType:"",
+            languageItems: ['English', 'Francais'],
             input: {
                 email: '',
                 companyName: '',
@@ -275,23 +291,23 @@ export default {
             { text: 'Cover Document', value: 'doc' },
             { text: 'Add Document', value: 'adddoc' },
           ],
-          coverDomesticBidder: [
+          farmer: [
             {
               sno: 1,
-              name: 'Bidder Domestic Profile Document',
+              name: 'Farmer ID Card',
               type: 'Standard Attachment',
               doc: 0,
               file:null
             },
             {
               sno: 2,
-              name: 'Bidder Certificates',
+              name: 'Farmer Certificates',
               type: 'Standard Attachment  ',
               doc: 0,
               file:null
             },
           ],
-          coverInternationalBidder: [
+          processor: [
             {
               sno: 1,
               name: 'Bidder Profile Document',
