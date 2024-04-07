@@ -185,7 +185,7 @@
               </v-row>
               <v-row v-show="userType === 'Farmer'">
                 <v-card color="grey lighten-1" class="mx-auto" outlined>
-                  <v-card-title class="justify-center">Documents Upload for Farmer</v-card-title>
+                  <v-card-title class="justify-center">Documents to Upload for Farmer</v-card-title>
                   <v-data-table :headers="headers" :items="farmer">
                     <template v-slot:item.adddoc="{ item }">
                       <v-file-input ref="inputUpload" v-model="item.file"  v-on:change="handleFileUpload(item)" dense></v-file-input>
@@ -196,7 +196,29 @@
 
               <v-row v-show="userType === 'Processor'">
                 <v-card color="grey lighten-1" class="mx-auto" outlined>
-                  <v-card-title class="justify-center">Documents Upload for Processor</v-card-title>
+                  <v-card-title class="justify-center">Documents to Upload for Processor</v-card-title>
+                  <v-data-table :headers="headers" :items="processor">
+                    <template v-slot:item.adddoc="{ item }">
+                      <v-file-input ref="inputUpload" v-model="item.file"  v-on:change="handleFileUpload(item)" dense></v-file-input>
+                    </template>
+                  </v-data-table>
+                </v-card>
+              </v-row>
+
+              <v-row v-show="userType === 'Distributor'">
+                <v-card color="grey lighten-1" class="mx-auto" outlined>
+                  <v-card-title class="justify-center">Documents to Upload for Distributor</v-card-title>
+                  <v-data-table :headers="headers" :items="processor">
+                    <template v-slot:item.adddoc="{ item }">
+                      <v-file-input ref="inputUpload" v-model="item.file"  v-on:change="handleFileUpload(item)" dense></v-file-input>
+                    </template>
+                  </v-data-table>
+                </v-card>
+              </v-row>
+
+              <v-row v-show="userType === 'Retailer'">
+                <v-card color="grey lighten-1" class="mx-auto" outlined>
+                  <v-card-title class="justify-center">Documents to Upload for Retailer</v-card-title>
                   <v-data-table :headers="headers" :items="processor">
                     <template v-slot:item.adddoc="{ item }">
                       <v-file-input ref="inputUpload" v-model="item.file"  v-on:change="handleFileUpload(item)" dense></v-file-input>
@@ -221,7 +243,7 @@
                 </v-row>
                 <v-row>
                     <v-col>
-                        Scanned copy of the certificate of Incoporation / GST
+                        Scanned copy of the certificate of Incorporation / GST
                         Registration Certificate
                     </v-col>
                 </v-row>
@@ -306,18 +328,57 @@ export default {
               doc: 0,
               file:null
             },
+            {
+              sno: 3,
+              name: 'Business Number or GST/HST/QST Number Document',
+              type: 'Standard Attachment  ',
+              doc: 0,
+              file:null
+            },
           ],
           processor: [
             {
               sno: 1,
-              name: 'Bidder Profile Document',
+              name: 'Certificate of Incorporation',
               type: 'Standard Attachment',
               doc:  0 ,
               file:null
             },
             {
               sno: 2,
-              name: 'Bidder Certificates/ Documentary Proof',
+              name: 'Business Number or GST/HST/QST Number Document',
+              type: 'Standard Attachment  ',
+              doc: 0,
+              file:null
+            },
+          ],
+          distributor: [
+            {
+              sno: 1,
+              name: 'Certificate of Incorporation',
+              type: 'Standard Attachment',
+              doc:  0 ,
+              file:null
+            },
+            {
+              sno: 2,
+              name: 'Business Number or GST/HST/QST Number Document',
+              type: 'Standard Attachment  ',
+              doc: 0,
+              file:null
+            },
+          ],
+          retailer: [
+            {
+              sno: 1,
+              name: 'Certificate of Incorporation',
+              type: 'Standard Attachment',
+              doc:  0 ,
+              file:null
+            },
+            {
+              sno: 2,
+              name: 'Business Number or GST/HST/QST Number Document',
               type: 'Standard Attachment  ',
               doc: 0,
               file:null
