@@ -1,56 +1,48 @@
 <template>
-    <v-app class="login">
-        <v-img aspect-ratio="2" src="@/assets/login_bg.png">
-            <v-card width="400" class="mx-auto mt-8">
-                <v-toolbar>
-                    <v-toolbar-title class="pb-0">
-                        <h4>Member Login</h4>
-                    </v-toolbar-title>
-                </v-toolbar>
-                <v-card-text>
-                    <v-form @submit.prevent="login">
-                        <v-text-field
-                            label="Username"
-                            prepend-icon="fa-user"
-                            v-model="input.email"
-                            text--primary
-                            required
-                        />
-                        <v-text-field
-                            :type="showPassword ? 'text' : 'password'"
-                            label="Password"
-                            v-model="input.password"
-                            prepend-icon="fa-lock"
-                            :append-icon="
-                                showPassword ? 'fa-eye' : 'fa-eye-slash'
-                            "
-                            @click:append="showPassword = !showPassword"
-                            text--primary
-                            required
-                        />
-                    </v-form>
-                </v-card-text>
-                <v-divider></v-divider>
-
-                <v-card-actions>
-                    <v-btn color="info" width="385" v-on:click="loginClicked()"
-                        >Login</v-btn
-                    >
-                </v-card-actions>
-                <v-card-actions>
-
-                    <v-btn color="info" width="385" to="/dashboard">Fake Login </v-btn>
-
-                </v-card-actions>
-                <v-row justify="center" align="center" >
-                    <v-btn text
-                    :to="{name: 'Register'}"
-                     small>Request User ID (For New Farmers)</v-btn>
-                </v-row>
+  <v-app class="login">
+    <v-img aspect-ratio="2" src="@/assets/login_bg.png">
+      <v-container fluid fill-height>
+        <v-layout align-start justify-space-around style="padding-top: 10%;">
+          <v-flex xs12 sm10 md8 lg6>
+            <v-card class="elevation-12">
+              <v-toolbar color="primary" dark flat>
+                <v-toolbar-title>Login</v-toolbar-title>
+              </v-toolbar>
+              <v-card-text>
+                <v-form>
+                  <v-text-field
+                      label="Username"
+                      prepend-icon="mdi-account"
+                      v-model="input.email"
+                      required
+                  />
+                  <v-text-field
+                      :type="showPassword ? 'text' : 'password'"
+                      label="Password"
+                      prepend-icon="mdi-lock"
+                      :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+                      @click:append="showPassword = !showPassword"
+                      v-model="input.password"
+                      required
+                  />
+                </v-form>
+              </v-card-text>
+              <v-card-actions class="justify-center">
+                <v-btn color="primary" class="mx-2" style="width: 63%;" @click="loginClicked()">Login</v-btn>
+                <v-btn color="secondary" class="mx-2" style="width: 35%;" to="/dashboard">Fake-Demo Login</v-btn>
+              </v-card-actions>
+              <v-card-actions class="justify-center">
+                <v-btn color="primary" :to="{name: 'Register'}" block>New to LotLock? Register Here as a Farmer</v-btn>
+              </v-card-actions>
             </v-card>
-        </v-img>
-    </v-app>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-img>
+  </v-app>
 </template>
+
+
 
 <script>
 import { RoleConstants } from '@/datasource/RoleConstants'
@@ -151,3 +143,8 @@ export default {
     },
 }
 </script>
+
+<style>
+.login {
+  background-color: #f5f5f5;
+}</style>
