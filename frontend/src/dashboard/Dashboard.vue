@@ -71,7 +71,7 @@ export default {
                 {
                     title: 'Consumer',
                     icon: ' fa-binoculars', //fa-flask
-                    route: { name: 'BidEvalExpert' },
+                    route: { name: 'ConsumerIndex' },
                 },
 
                 {

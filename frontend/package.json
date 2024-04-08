@@ -20,7 +20,8 @@
         "vue-router": "^3.2.0",
         "vue-terminal-ui": "^0.1.6",
         "vuetify": "^2.2.11",
-        "webpack": "^5.90.3"
+        "webpack": "^5.90.3",
+        "@zxing/library": "^0.19.1"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.14.0",

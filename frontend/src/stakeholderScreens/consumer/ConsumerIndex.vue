@@ -18,7 +18,7 @@ import AppBar from '@/dashboard/layout/AppBar.vue'
 import Footer from '@/dashboard/layout/Footer.vue'
 
 export default {
-    name: 'bidEvalExpertIndex',
+    name: 'ConsumerIndex',
     methods: {
         changeMiniVariant() {
             this.miniVariant = !this.miniVariant
@@ -41,7 +41,7 @@ export default {
                 {
                     title: 'Track Product Journey',
                     icon: 'fa-cube',
-                    route: { name: 'AssignedBids' },
+                    route: { name: 'Scanner' },
                 },
                 {
                   title: 'View Product Details',

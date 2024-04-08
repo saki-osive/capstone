@@ -42,10 +42,15 @@ export default {
                   icon: ' fa-minus-square',
                   route: { name: 'SubmittedProducts' },
                 },
+                // {
+                //     title: 'Create Lot Record',
+                //     icon: 'fa-list',
+                //     route: { name: 'LotRecordsList' },
+                // },
                 {
-                    title: 'Create Lot Record',
-                    icon: 'fa-list',
-                    route: { name: 'LotRecordsList' },
+                  title: 'Create Lot Record',
+                  icon: 'fa-list',
+                  route: { name: 'CreateLotThroughFarmerDemo' },
                 },
                 {
                   title: 'Verify Certifications',

@@ -435,13 +435,13 @@ const routes = [
        ]
     },
 
-    // Bid Evaluation Expert
+    // Consumer
     {
         path: '/consumer',
-        name: 'BidEvalExpert',
+        name: 'ConsumerIndex',
         props: true,
         component: () =>
-            import('@/stakeholderScreens/consumer/bidEvalExpertIndex.vue'),
+            import('@/stakeholderScreens/consumer/ConsumerIndex'),
         children: [
             {
                 path: 'assignedBids',
@@ -466,6 +466,19 @@ const routes = [
                 props: true,
                 component: () =>
                     import('@/stakeholderScreens/consumer/src/Notifications.vue'),
+            },
+
+            {
+                path: 'Scanner',
+                name: 'Scanner',
+                props: true,
+                component: () => import('@/stakeholderScreens/consumer/src/CustomerScanner.vue'),
+            },
+
+            {
+                path: 'productJourney',
+                name: 'ProductJourney',
+                component: () => import('@/stakeholderScreens/consumer/src/ProductJourney.vue')
             },
 
             {
@@ -622,12 +635,6 @@ children: [
             props: true,
             component: () => import('@/stakeholderScreens/shipper/src/Ports.vue'),
         },
-        
-       
-
-
-
-
 
 
     ],
@@ -830,12 +837,24 @@ children: [
                 component: () =>
                     import('@/stakeholderScreens/farmer/src/Notifications.vue'),
             },
+            // {
+            //     path: 'lotRecordsList',
+            //     name: 'LotRecordsList',
+            //     props: true,
+            //     component: () =>
+            //         import('@/stakeholderScreens/farmer/src/LotRecordsList.vue'),
+            // },
             {
                 path: 'lotRecordsList',
-                name: 'LotRecordsList',
+                name: 'CreateLotThroughFarmerDemo',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/farmer/src/LotRecordsList.vue'),
+                    import('@/stakeholderScreens/farmer/src/CreateLotThroughFarmerDemo.vue'),
+            },
+            {
+                path: 'modeOfTransport',
+                name: 'ModeOfTransportFarmer',
+                component: () => import('@/stakeholderScreens/farmer/src/ModeOfTransportFarmer.vue')
             },
             {
                 path: 'activeTenders',
