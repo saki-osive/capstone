@@ -13,14 +13,14 @@ Run below command to setup database
 
 
 db.roles.insertMany([
-   { name: "ROLE_BIDDER" },
-   { name: "ROLE_BIDDER_MANAGER" },
+   { name: "ROLE_FARMER" },
+   { name: "ROLE_PROCESSOR" },
    { name: "ROLE_TENDER_CREATOR" },
-   { name: "ROLE_TENDER_MANAGER" },
+   { name: "ROLE_RETAILER" },
    { name: "ROLE_ADMIN" },
    { name: "ROLE_ONBOARDING" },
-   { name: "ROLE_BID_EVALUATION_EXPERT" },
-   { name: "ROLE_BID_EVALUATION_CHAIRMAN" },
+   { name: "ROLE_CONSUMER" },
+   { name: "ROLE_GOVERNMENT" },
    { name: "ROLE_CVO" },
-   { name: "ROLE_AUDIT" }
+   { name: "ROLE_SUSTAINABILITY_AUDITOR" }
 ])

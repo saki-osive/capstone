@@ -5,7 +5,7 @@
         <v-layout align-start justify-space-around style="padding-top: 10%;">
           <v-flex xs12 sm10 md8 lg6>
             <v-card class="elevation-12">
-              <v-toolbar color="primary" dark flat>
+              <v-toolbar color="#36454f" dark flat>
                 <v-toolbar-title>Login</v-toolbar-title>
               </v-toolbar>
               <v-card-text>
@@ -28,11 +28,11 @@
                 </v-form>
               </v-card-text>
               <v-card-actions class="justify-center">
-                <v-btn color="primary" class="mx-2" style="width: 63%;" @click="loginClicked()">Login</v-btn>
+                <v-btn color="#87CEEB" class="mx-2" style="width: 63%;" @click="loginClicked()">Login</v-btn>
                 <v-btn color="secondary" class="mx-2" style="width: 35%;" to="/dashboard">Fake-Demo Login</v-btn>
               </v-card-actions>
               <v-card-actions class="justify-center">
-                <v-btn color="primary" :to="{name: 'Register'}" block>New to LotLock? Register Here as a Farmer</v-btn>
+                <v-btn color="#87CEEB" :to="{name: 'Register'}" block>New to LotLock? Register Here as a Farmer</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
