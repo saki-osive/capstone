@@ -93,7 +93,7 @@
                       <v-text-field
                           :type="showPassword ? 'text' : 'password'"
                           label="Password"
-                          v-model="inputPassword.password"
+                          v-model="input.password"
                           prepend-icon="fa-lock"
                           :append-icon="
                                 showPassword ? 'fa-eye' : 'fa-eye-slash'
@@ -288,6 +288,7 @@ export default {
             languageItems: ['English', 'Francais'],
             input: {
                 email: '',
+                password: '',
                 companyName: '',
                 gailVendorCode: '',
                 gailTenderRef: '',

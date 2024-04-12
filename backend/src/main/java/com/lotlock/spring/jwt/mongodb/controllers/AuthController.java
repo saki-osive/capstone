@@ -31,10 +31,10 @@ import com.lotlock.spring.jwt.mongodb.payload.request.LoginRequest;
 import com.lotlock.spring.jwt.mongodb.payload.request.SignupRequest;
 import com.lotlock.spring.jwt.mongodb.payload.response.JwtResponse;
 import com.lotlock.spring.jwt.mongodb.payload.response.MessageResponse;
-import com.bezkoder.spring.jwt.mongodb.repository.RoleRepository;
-import com.bezkoder.spring.jwt.mongodb.repository.UserRepository;
-import com.bezkoder.spring.jwt.mongodb.security.jwt.JwtUtils;
-import com.bezkoder.spring.jwt.mongodb.security.services.UserDetailsImpl;
+import com.lotlock.spring.jwt.mongodb.repository.RoleRepository;
+import com.lotlock.spring.jwt.mongodb.repository.UserRepository;
+import com.lotlock.spring.jwt.mongodb.security.jwt.JwtUtils;
+import com.lotlock.spring.jwt.mongodb.security.services.UserDetailsImpl;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController

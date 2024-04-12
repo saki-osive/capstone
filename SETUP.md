@@ -1,18 +1,20 @@
 # AUTOMATED SETUP 
 
-Change permission of the script 
+1. Change permission of the script 
 
     chmod +x setup.sh 
 
-In the root directory of the project run
+2. In the root directory of the project run
 
     ./setup.sh
 
-This will run the databases and your frontend. 
+This will set up mongo+minio and your frontend. 
 
-Go to localhost:9000 and create a bucket by the name `lotlockbucket`
+3. In frontend/vue.config.js, add your IP Address in the proxy key 
 
-Now in a new terminal run the backend 
+4. Go to localhost:9000 and create a bucket by the name `lotlockbucket`
+
+5. Now in a new terminal run the backend 
 
     cd backend 
 

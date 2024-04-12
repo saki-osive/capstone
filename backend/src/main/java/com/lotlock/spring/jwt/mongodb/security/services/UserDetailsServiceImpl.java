@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.lotlock.spring.jwt.mongodb.models.User;
-import com.bezkoder.spring.jwt.mongodb.repository.UserRepository;
+import com.lotlock.spring.jwt.mongodb.repository.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

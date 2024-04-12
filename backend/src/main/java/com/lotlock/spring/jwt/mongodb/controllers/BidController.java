@@ -8,7 +8,7 @@ import com.lotlock.spring.jwt.mongodb.network.response.BaseResponse;
 import com.lotlock.spring.jwt.mongodb.repository.BidItemRepository;
 import com.lotlock.spring.jwt.mongodb.repository.BidRepository;
 import com.lotlock.spring.jwt.mongodb.repository.TenderRepository;
-import com.bezkoder.spring.jwt.mongodb.services.TransactionService;
+import com.lotlock.spring.jwt.mongodb.services.TransactionService;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jlefebure.spring.boot.minio.MinioService;
