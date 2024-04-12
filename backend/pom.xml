@@ -9,7 +9,7 @@
 		<version>2.2.4.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bezkoder</groupId>
+	<groupId>com.lotlock</groupId>
 	<artifactId>spring-boot-security-jwt-mongodb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-security-jwt-mongodb</name>
@@ -129,7 +129,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.bezkoder.spring.jwt.mongodb.SpringBootSecurityJwtMongodbApplication</mainClass>
+							<mainClass>com.lotlock.spring.jwt.mongodb.SpringBootSecurityJwtMongodbApplication</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>

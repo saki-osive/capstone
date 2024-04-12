@@ -1,0 +1,14 @@
+package com.lotlock.spring.jwt.mongodb.models;
+
+public enum ERole {
+  ROLE_FARMER,
+  ROLE_PROCESSOR,
+  ROLE_DISTRIBUTOR,
+  ROLE_RETAILER,
+  ROLE_ADMIN,
+  ROLE_ONBOARDING,
+  ROLE_CONSUMER,
+  ROLE_GOVERNMENT,
+  ROlE_CVO,
+  ROLE_SUSTAINABILITY_AUDITOR
+}
