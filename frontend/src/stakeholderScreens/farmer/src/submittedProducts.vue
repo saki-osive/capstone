@@ -5,7 +5,7 @@
         </v-toolbar>
         <v-data-table
             :headers="headers"
-            :items="submittedTendersList"
+            :items="submittedLotsList"
             item-key="name">
             <template v-slot:item.downloadTechDoc="{ item }">
                 <v-btn
@@ -51,7 +51,7 @@ export default {
 
         onTrackClicked(item){
             console.log(item);
-            this.$router.push({name: 'BidTrackStatus'})
+            this.$router.push({name: 'ProductTrackStatus'})
         },
         onFinancialDownloadClicked(item){
             console.log(item)
@@ -97,11 +97,11 @@ export default {
             onCancel: null,
         });
 
-        this.$api.get('/bid/all')
+        this.$api.get('/product/all')
             .then((response) => {
                 loader.hide();
                 if (response.data.length > 0){
-                    this.submittedTendersList = response.data;
+                    this.submittedLotsList = response.data;
                     this.showNotification("Success","Fetched all bids.")
                 }else {
                     this.showNotification("Note","No products available.","info")
@@ -122,15 +122,15 @@ export default {
                 },
                 {
                     text: 'Lot Name',
-                    value: 'tender.scopeOfWork',
+                    value: 'lot.scopeOfWork',
                 },
                 {
                     text: 'Lot Category',
-                    value: 'tender.category',
+                    value: 'lot.category',
                 },
                 {
                     text: 'Submission Date',
-                    value: 'tender.dueDateForBidSubmission',
+                    value: 'lot.dueDateForProductSubmission',
                 },
                 {
                     text: 'Currency',
@@ -153,7 +153,7 @@ export default {
                     value: 'status',
                 },
             ],
-            submittedTendersList: [
+            submittedLotsList: [
 
             ],
         }

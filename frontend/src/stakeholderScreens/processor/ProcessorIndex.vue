@@ -1,7 +1,7 @@
 <template>
     <div>
         <AppBar @toMiniVariant="changeMiniVariant" />
-        <SideBar :navItems="biddermanagerNavItems" :miniVariant="miniVariant" />
+        <SideBar :navItems="processorNavItems" :miniVariant="miniVariant" />
         <v-main app>
             <v-container>
                 <router-view></router-view>
@@ -31,17 +31,17 @@ export default {
     data() {
         return {
             miniVariant: false,
-            biddermanagerNavItems: [
+            processorNavItems: [
                 {
                     title: 'Dashboard',
                     icon: 'fa-home',
-                    route: { name: 'BidderManagerDashboard' },
+                    route: { name: 'ProcessorDashboard' },
                 },
 
                 {
-                    title: 'Add Bidder',
+                    title: 'Add Farmer',
                     icon: 'fa-users ',
-                    route: { name: 'AddBidder' },
+                    route: { name: 'AddFarmer' },
                 },
                 {
                     title: 'View All',
@@ -54,9 +54,9 @@ export default {
                     route: { name: 'PendingForReview' },
                 },
                 {
-                    title: 'Suspended Bidder',
+                    title: 'Suspended Farmer',
                     icon: ' fa-ban',
-                    route: { name: 'SuspendedBidder' },
+                    route: { name: 'SuspendedFarmer' },
                 },
             ],
         }

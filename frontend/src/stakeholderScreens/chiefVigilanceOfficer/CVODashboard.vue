@@ -9,16 +9,16 @@
                     style="height: 100px;"
                 >
                     <v-card class="ma-3 pa-6" outlined tile
-                        >120 New Bids</v-card
+                        >120 New Products</v-card
                     >
                     <v-card class="ma-3 pa-6" outlined tile
                         >25 Complaints</v-card
                     >
                     <v-card class="ma-3 pa-6" outlined tile
-                        >4 New Tenders</v-card
+                        >4 New Lots</v-card
                     >
                     <v-card class="ma-3 pa-6" outlined tile
-                        >175 Total Tenders</v-card
+                        >175 Total Lots</v-card
                     >
                 </v-row>
             </v-col>
@@ -112,7 +112,7 @@
 const gradients = [['red', 'orange', 'yellow']]
 
 export default {
-    name: 'CVOProfile',
+    name: 'CVODashboard',
     data() {
         return {
             alignmentsAvailable: [

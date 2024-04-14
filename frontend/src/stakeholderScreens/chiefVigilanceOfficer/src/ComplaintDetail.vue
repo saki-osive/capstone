@@ -14,25 +14,25 @@
                     <pre>
           Complaint ID                 :         221
           Complaint Reason             :      Unbiased Decision
-          Details                      :      The tender was published last
+          Details                      :      The lot was published last
                                               month. The demand was for castrol.
                                               We are the only supplier of Castrol 
                                               in this area. Still we didn't get the 
-                                              tender. 
-          Tender Registration Number   :      SG808332
+                                              lot.
+          Lot Registration Number   :      SG808332
           Inviting Officer             :      Deepak Kumar
-          Tender Type                  :      Service Contract 
-          Tender Category              :      Services 
+          Lot Type                  :      Service Contract
+          Lot Category              :      Services
           No. of cover(s)              :      80
           Product Category             :      Machineries
-          Tender Recieving Location    :      Mayapur
+          Lot Recieving Location    :      Mayapur
           Form Contract                :      Works
           Submission Date              :      October 23, 2019
           </pre
                     >
                     <br />
                     <div class="text-center">
-                        <v-btn small class="green mx-auto" dark to="TrackTender"
+                        <v-btn small class="green mx-auto" dark to="TrackLot"
                             >Track</v-btn
                         >
                     </div>
@@ -43,12 +43,12 @@
 
                 <div class="text-center">
                     <v-btn small class="primary mr-12" dark
-                        >Contact Tender Creator</v-btn
+                        >Contact Lot Creator</v-btn
                     >
                     <v-btn small class="secondary mr-12" dark
                         >Mark as invalid Complaint</v-btn
                     >
-                    <v-btn small class="red mr-12" dark>Flag the tender</v-btn>
+                    <v-btn small class="red mr-12" dark>Flag the lot</v-btn>
                 </div>
                 <br />
             </v-card>

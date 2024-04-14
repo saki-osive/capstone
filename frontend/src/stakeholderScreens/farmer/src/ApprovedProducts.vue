@@ -4,8 +4,8 @@
       <v-toolbar-title>My Approved Lots</v-toolbar-title>
     </v-toolbar>
     <v-data-table
-        :headers="approvedBidsHeaders"
-        :items="approvedBidsCovers"
+        :headers="approvedProductsHeaders"
+        :items="approvedProductsCovers"
         item-key="name"
         :search="search"
     >
@@ -38,14 +38,14 @@ export default {
 name: "ApprovedProducts",
   data() {
     return {
-      approvedBidsHeaders: [
+      approvedProductsHeaders: [
         {
           text: 'S.no.',
           value: 'serialNumber',
         },
         {
           text: 'Lot no.',
-          value: 'tenderNumber',
+          value: 'lotNumber',
         },
         {
           text: 'Starting Date',
@@ -64,10 +64,10 @@ name: "ApprovedProducts",
           value: 'action',
         },
       ],
-      approvedBidsCovers: [
+      approvedProductsCovers: [
         {
           serialNumber: 1 ,
-          tenderNumber: 8541256326,
+          lotNumber: 8541256326,
           startingDate: '18.02.2020',
           closingDate: '1.12.2020',
         },

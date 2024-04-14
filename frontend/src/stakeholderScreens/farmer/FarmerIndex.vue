@@ -1,7 +1,7 @@
 <template>
     <div>
         <AppBar @toMiniVariant="changeMiniVariant" />
-        <SideBar :navItems="bidderNavItems" :miniVariant="miniVariant" />
+        <SideBar :navItems="farmerNavItems" :miniVariant="miniVariant" />
         <v-main app>
             <v-container fluid>
                 <router-view></router-view>
@@ -17,7 +17,7 @@ import AppBar from '@/dashboard/layout/AppBar.vue'
 import Footer from '@/dashboard/layout/Footer.vue'
 
 export default {
-    name: 'ProcessorIndex',
+    name: 'FarmerIndex',
     methods: {
         changeMiniVariant() {
             this.miniVariant = !this.miniVariant
@@ -31,7 +31,7 @@ export default {
     data() {
         return {
             miniVariant: false,
-            bidderNavItems: [
+            farmerNavItems: [
                 {
                     title: 'Dashboard',
                     icon: 'fa-home',
@@ -65,7 +65,7 @@ export default {
                 {
                     title: 'Notifications',
                     icon: 'fa-bell',
-                    route: { name: 'Notifications' },
+                    route: { name: 'FarmerNotifications' },
                 },
                 
             ],

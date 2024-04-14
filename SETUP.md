@@ -1,20 +1,22 @@
 # AUTOMATED SETUP 
 
-1. Change permission of the script 
+Note -  If you are `running this automated setup script for the first time` on your system, 
+then `update the sleep time in the script.sh to 10 from 3` based on your download speed as 
+it will pull and download images for the first time which might take longer time
+
+Change permission of the script 
 
     chmod +x setup.sh 
 
-2. In the root directory of the project run
+In the root directory of the project run
 
     ./setup.sh
 
 This will set up mongo+minio and your frontend. 
 
-3. In frontend/vue.config.js, add your IP Address in the proxy key 
+In `frontend/vue.config.js`, add your IP Address in the `proxy` key 
 
-4. Go to localhost:9000 and create a bucket by the name `lotlockbucket`
-
-5. Now in a new terminal run the backend 
+Now in a new terminal run the backend 
 
     cd backend 
 

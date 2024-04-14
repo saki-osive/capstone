@@ -2,7 +2,7 @@
     <div>
         <v-radio-group v-model="radios" :mandatory="false">
             <v-row>
-                <p class="question">1. Is Bidder ISO Certifed</p>
+                <p class="question">1. Is Farmer ISO Certifed</p>
                 <v-radio label="Yes" class="my-radio" value="ISOCertifiedYes"></v-radio>
                 <v-radio label="No" class="my-radio" value="ISOCertifiedNo"></v-radio>
             </v-row>

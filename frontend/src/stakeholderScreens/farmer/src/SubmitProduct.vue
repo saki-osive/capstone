@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-toolbar class="blue lighten-2">
-            <v-toolbar-title>Submit Bid Details</v-toolbar-title>
+            <v-toolbar-title>Submit Product Details</v-toolbar-title>
         </v-toolbar>
         <v-stepper v-model="e1">
             <v-stepper-header>
@@ -23,7 +23,7 @@
             <v-stepper-items>
                 <v-stepper-content step="1">
                     <v-card class="mb-12" flat>
-                        <TenderInformation :tender="tenderModel" ref="tenderInformationRef"/>
+                        <LotInformation :lot="lotModel" ref="lotInformationRef"/>
                     </v-card>
                     <v-card flat>
                         <v-row>
@@ -69,7 +69,7 @@
                             <v-col cols="3" align="left">{{ this.input.currency }}</v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="5" align="right">Bid Amount:</v-col>
+                            <v-col cols="5" align="right">Product Amount:</v-col>
                             <v-col cols="3" align="left">{{ this.input.bidAmount }}</v-col>
                         </v-row>
                         <v-row>
@@ -77,16 +77,16 @@
                             <v-col cols="3" align="left">{{ this.input.gstNumber }}</v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="5" align="right">Tender Reference No:</v-col>
-                            <v-col cols="3" align="left">{{ this.tenderModel.referenceNumber }}</v-col>
+                            <v-col cols="5" align="right">Lot Reference No:</v-col>
+                            <v-col cols="3" align="left">{{ this.lotModel.referenceNumber }}</v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="5" align="right">Lot Type:</v-col>
-                            <v-col cols="3" align="left">{{ this.tenderModel.type }}</v-col>
+                            <v-col cols="3" align="left">{{ this.lotModel.type }}</v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="5" align="right">Lot Category:</v-col>
-                            <v-col cols="3" align="left">{{ this.tenderModel.category }}</v-col>
+                            <v-col cols="3" align="left">{{ this.lotModel.category }}</v-col>
                         </v-row>
 
                         <v-row>
@@ -114,35 +114,35 @@
 </template>
 
 <script>
-import TenderInformation from '@/stakeholderScreens/farmer/src/bidSubmissionTabItems/TenderInformation.vue'
-import UploadDocuments from '@/stakeholderScreens/farmer/src/bidSubmissionTabItems/UploadDocuments.vue'
-import BillOfMaterial from '@/stakeholderScreens/farmer/src/bidSubmissionTabItems/BillOfMaterial.vue'
+import LotInformation from '@/stakeholderScreens/farmer/src/productSubmissionTabItems/LotInformation.vue'
+import UploadDocuments from '@/stakeholderScreens/farmer/src/productSubmissionTabItems/UploadDocuments.vue'
+import BillOfMaterial from '@/stakeholderScreens/farmer/src/productSubmissionTabItems/BillOfMaterial.vue'
 
 
 export default {
-    name: 'SubmitBid',
-    props:["tender"],
+    name: 'SubmitProduct',
+    props:["lot"],
     components: {
-        TenderInformation,
+        LotInformation,
         UploadDocuments,
         BillOfMaterial ,
     },
     mounted() {
 
-        console.log(this.tender);
-        this.tenderModel = this.tender;
-        console.log("this.tenderModel");
-        console.log(this.tenderModel);
-        //this.$refs.tenderInformationRef.updateUI(this.tender)
+        console.log(this.lot);
+        this.lotModel = this.lot;
+        console.log("this.lotModel");
+        console.log(this.lotModel);
+        //this.$refs.lotInformationRef.updateUI(this.lot)
     },
     methods:{
         tab1ContinueClicked(){
             this.e1 = 2;
-            this.input = this.$refs.tenderInformationRef.input;
+            this.input = this.$refs.lotInformationRef.input;
         },
         tab2ContinueClicked(){
             this.e1 = 3;
-            this.input = this.$refs.tenderInformationRef.input;
+            this.input = this.$refs.lotInformationRef.input;
             this.documents = this.$refs.uploadDocumentRef.documents;
 
         },
@@ -161,11 +161,11 @@ export default {
             });
 
             var request = JSON.parse(JSON.stringify(this.input));
-            request["tender"] = this.tenderModel;
+            request["lot"] = this.lotModel;
             request["bidItems"] = this.$refs.billOfMaterial.covers;
 
             let formData = new FormData();
-            formData.append("bid",JSON.stringify(request));
+            formData.append("product",JSON.stringify(request));
 
             this.documents.forEach(function(entry) {
 
@@ -176,7 +176,7 @@ export default {
                 }
             });
 
-            this.$api.post('/bid/create', formData,{
+            this.$api.post('/product/create', formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -185,16 +185,16 @@ export default {
                     loader.hide();
                     if (response.data.status === true){
 
-                        this.$router.push({name:"SubmittedBids"});
-                        this.showNotification("Success","Bid saved Successfully.")
+                        this.$router.push({name:"SubmittedProducts"});
+                        this.showNotification("Success","Product saved Successfully.")
                     }else {
-                        this.showNotification("Error","Failed to save bid.","info")
+                        this.showNotification("Error","Failed to save product.","info")
                     }
 
                 }, (error) => {
                     loader.hide();
                     console.log(error);
-                    this.showNotification("Error","Failed to save bid.","error")
+                    this.showNotification("Error","Failed to save product.","error")
                 });
 
         }
@@ -207,7 +207,7 @@ export default {
                 bidAmount:""
             },
             documents:[],
-            tenderModel:{},
+            lotModel:{},
             e1: 1,
         }
     },

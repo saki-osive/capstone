@@ -40,7 +40,7 @@
                 <v-btn
                     color="blue"
                     text
-                    v-on:click="onTenderIdClicked(item)"
+                    v-on:click="onLotIdClicked(item)"
                 >{{item.id}}</v-btn>
             </template>
         </v-data-table>
@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import {TenderTableHeaders} from "../../tenderCreator/datasource/TenderTableHeaders";
+import {LotTableHeaders} from "@/datasource/LotTableHeaders";
 
 export default {
     name: "LotRecordsList",
@@ -60,12 +60,12 @@ export default {
             onCancel: null,
         });
 
-        this.$api.get('/tender/allTendersSentForApproval')
+        this.$api.get('/lot/allLotsSentForApproval')
             .then((response) => {
                 loader.hide();
                 if (response.data.length > 0){
                     this.covers = response.data;
-                    this.showNotification("Success","Fetched all tenders.")
+                    this.showNotification("Success","Fetched all lots.")
                 }else {
                     this.showNotification("Note","No lot records available.","info")
                 }
@@ -79,66 +79,66 @@ export default {
     },
     methods:{
 
-        onTenderIdClicked(tenderItem){
-            console.log("tenderitem push");
-            console.log(tenderItem);
+        onLotIdClicked(lotItem){
+            console.log("lotitem push");
+            console.log(lotItem);
 
-            this.$router.push({name: 'TenderDetailsForBidder',params:{tender:tenderItem}});
+            this.$router.push({name: 'LotDetailsForFarmer',params:{lot:lotItem}});
         }
     },
     data() {
         return {
             search: '',
-            items: ['Active Tenders', 'Inactive Tenders'],
+            items: ['Active Lots', 'Inactive Lots'],
 
             covers: [
                 {
-                    title: 'test tender for BSE ',
+                    title: 'test lot for BSE ',
                     sdate: '4-12-2011',
                     time: '9:12:00',
-                    tendernumber: '8456557532',
-                    transtype: 'Open Tender to bid',
+                    lotnumber: '8456557532',
+                    transtype: 'Open Lot to product',
                 },
                 {
-                    title: 'tender supply for d1, d2 and d3 ',
+                    title: 'lot supply for d1, d2 and d3 ',
 
                     sdate: '9-12-2001',
                     time: '02:09:01',
-                    tendernumber: '8454678532',
-                    transtype: 'Open Tender to bid',
+                    lotnumber: '8454678532',
+                    transtype: 'Open Lot to product',
                 },
                 {
-                    title: 'tender supply  CWEk-31/2019-20',
+                    title: 'lot supply  CWEk-31/2019-20',
                     sdate: '29-12-2001',
                     time: '09:02:20',
-                    tendernumber: '8456535780',
-                    transtype: 'Open Tender to bid',
+                    lotnumber: '8456535780',
+                    transtype: 'Open Lot to product',
                 },
 
                 {
-                    title: 'tender supply Moulded grating ',
+                    title: 'lot supply Moulded grating ',
                     sdate: '4-12-2011',
                     time: '09:12:20',
-                    tendernumber: '8567457678',
-                    transtype: 'Open Tender to bid',
+                    lotnumber: '8567457678',
+                    transtype: 'Open Lot to product',
                 },
                 {
-                    title: 'tender supply for d1, d2 and d3 ',
+                    title: 'lot supply for d1, d2 and d3 ',
 
                     sdate: '9-12-2001',
                     time: '02:09:02',
-                    tendernumber: '8567756821',
-                    transtype: 'Open Tender to bid',
+                    lotnumber: '8567756821',
+                    transtype: 'Open Lot to product',
                 },
                 {
-                    title: 'tender supply  CWEk-31/2019-20',
+                    title: 'lot supply  CWEk-31/2019-20',
                     sdate: '29-12-2001',
                     time: '19:02:22',
-                    tendernumber: '80086414680',
-                    transtype: 'Open Tender to bid',
+                    lotnumber: '80086414680',
+                    transtype: 'Open Lot to product',
                 },
             ],
-            headers: TenderTableHeaders.header,
+            headers: LotTableHeaders.header,
         }
     },
 }

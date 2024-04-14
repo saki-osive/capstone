@@ -60,7 +60,7 @@
                         <v-text-field outlined></v-text-field>
                     </v-col>
                     <v-col cols="3">
-                        <v-subheader>Tender Ref</v-subheader>
+                        <v-subheader>Lot Ref</v-subheader>
                     </v-col>
                     <v-col>
                         <v-text-field outlined></v-text-field>

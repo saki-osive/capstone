@@ -11,7 +11,7 @@
 
         <v-container mx-auto>
             <v-row>
-                <v-subheader inset>TenderID</v-subheader>
+                <v-subheader inset>LotID</v-subheader>
 
                 <v-col cols="4" class="my-0 py-0">
                     <v-text-field
@@ -114,7 +114,7 @@ export default {
                     value: 'title',
                 },
                 {
-                    text: 'Tender Reference No',
+                    text: 'Lot Reference No',
                     value: 'refNo',
                 },
 

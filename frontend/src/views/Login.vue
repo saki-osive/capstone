@@ -32,7 +32,7 @@
                 <v-btn color="secondary" class="mx-2" style="width: 35%;" to="/dashboard">Fake-Demo Login</v-btn>
               </v-card-actions>
               <v-card-actions class="justify-center">
-                <v-btn color="#87CEEB" :to="{name: 'Register'}" block>New to LotLock? Register Here as a Farmer</v-btn>
+                <v-btn color="#87CEEB" :to="{name: 'Register'}" block>New to LotLock? Register Here</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -94,10 +94,10 @@ export default {
                                 this.$router.push({ path: '/processor' });
                                 break;
                             case RoleConstants.ROLE_DISTRIBUTOR:
-                                this.$router.push({ path: '/tenderCreator' });
+                                this.$router.push({ path: '/lotCreator' });
                                 break;
                             case RoleConstants.ROLE_RETAILER:
-                                this.$router.push({ path: '/tenderManager' });
+                                this.$router.push({ path: '/retailer' });
                                 break;
                             case RoleConstants.ROLE_ADMIN:
                                 this.$router.push({ path: '/farmer' });

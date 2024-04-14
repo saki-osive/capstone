@@ -30,6 +30,9 @@ const routes = [
         component: () => import('@/dashboard/Dashboard.vue'),
         props: true,
     },
+
+    /** 2. Processor Stakeholder */
+
     {
         path: '/processor',
         name: 'ProcessorIndex',
@@ -38,29 +41,29 @@ const routes = [
         children: [
             {
                 path: 'dashboard',
-                name: 'BidderManagerDashboard',
+                name: 'ProcessorDashboard',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/processor/BidderManagerDashboard.vue'
+                        '@/stakeholderScreens/processor/ProcessorDashboard.vue'
                     ),
             },
             {
-                path: 'addBidder',
-                name: 'AddBidder',
+                path: 'addFarmer',
+                name: 'AddFarmer',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/processor/src/addBidder/AddBidder.vue'
+                        '@/stakeholderScreens/processor/src/addFarmer/AddFarmer.vue'
                     ),
             },
             {
-                path: 'bidderAdded',
-                name: 'BidderAdded',
+                path: 'farmerAdded',
+                name: 'FarmerAdded',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/processor/src/addBidder/BidderAdded.vue'
+                        '@/stakeholderScreens/processor/src/addFarmer/FarmerAdded.vue'
                     ),
             },
             {
@@ -73,12 +76,12 @@ const routes = [
                     ),
             },
             {
-                path: 'bidderDetails',
-                name: 'BidderDetails',
+                path: 'farmerDetails',
+                name: 'FarmerDetails',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/processor/src/pendingForReview/BidderDetail.vue'
+                        '@/stakeholderScreens/processor/src/pendingForReview/FarmerDetails.vue'
                     ),
             },
             {
@@ -91,26 +94,29 @@ const routes = [
                     ),
             },
             {
-                path: 'bidderRegistered',
-                name: 'BidderRegisteredConfirmation',
+                path: 'farmerRegistered',
+                name: 'FarmerRegistered',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/processor/src/pendingForReview/BidderRegistered.vue'
+                        '@/stakeholderScreens/processor/src/pendingForReview/FarmerRegistered.vue'
                     ),
             },
             {
-                path: 'suspendedBidder',
-                name: 'SuspendedBidder',
+                path: 'suspendedFarmer',
+                name: 'SuspendedFarmer',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/processor/src/SuspendedBidders.vue'
+                        '@/stakeholderScreens/processor/src/SuspendedFarmer.vue'
                     ),
             },
         ],
     },
-    //CVO
+
+
+    /** 9. CVO Stakeholder */
+
     {
         path: '/cvo',
         name: 'CVOIndex',
@@ -137,109 +143,32 @@ const routes = [
             },
         ],
     },
-    // Tender Creator
+
+    /** 4. Retailer Stakeholder */
+
     {
-        path: '/tenderCreator',
-        name: 'TenderCreatorIndex',
-        component: () =>
-            import('@/stakeholderScreens/tenderCreator/TenderCreatorIndex.vue'),
-        children: [
-            {
-                path: 'createTender',
-                name: 'CreateTender',
-                props: true,
-                component: () =>
-                    import(
-                        '@/stakeholderScreens/tenderCreator/src/TenderCreateMain.vue'
-                    ),
-            },
-
-            {
-                path: 'TCDashboard',
-                name: 'TCDashboard',
-                props: true,
-                component: () =>
-                    import(
-                        '@/stakeholderScreens/tenderCreator/TCDashboard.vue'
-                    ),
-            },
-
-
-            {
-                path: 'activeTenders',
-                name: 'TenderCreatorActiveTenders',
-                props: true,
-                component: () =>
-                    import(
-                        '@/stakeholderScreens/tenderCreator/src/TenderCreatorActiveTenders.vue'
-                    ),
-            },
-            {
-                path: 'pastTenders',
-                name: 'PastTenders',
-                props: true,
-                component: () =>
-                    import(
-                        '@/stakeholderScreens/tenderCreator/src/PastTenders.vue'
-                    ),
-            },
-            {
-                path: 'drafts',
-                name: 'DraftTendersList',
-                props: true,
-                component: () => import('@/stakeholderScreens/tenderCreator/src/DraftTendersList.vue'),
-            },
-            // {
-            //     path: 'tenderTemplates',
-            //     name: 'TenderTemplates',
-            //     component: () => import('@/stakeholderScreens/tenderCreator/src/TenderTemplates.vue'),
-            // },
-            {
-                path: 'listOfTendersSentForApproval',
-                name: 'ListOfTendersSentForApproval',
-                props: true,
-                component: () => import('@/stakeholderScreens/tenderCreator/src/submittedTenderstatus/ListOfTendersSentForApproval.vue'),
-            },
-            {
-                path: 'statusOfSubmitted',
-                name: 'StatusOfSubmitted',
-                props: true,
-                component: () => import('@/stakeholderScreens/tenderCreator/src/submittedTenderstatus/StatusOfSubmitted.vue'),
-            },
-            {
-                path: 'tenderSentForCorrigendum',
-                name: 'TenderSentForCorrigendum',
-                props: true,
-                component: () => import('@/stakeholderScreens/tenderCreator/src/TenderSentForCorrigendum.vue'),
-            },
-            
-        ],
-    },
-
-    // Tender manager
-    {
-        path: '/tenderManager',
-        name: 'TenderManagerIndex',
+        path: '/retailer',
+        name: 'RetailerIndex',
         props: true,
         component: () =>
-            import('@/stakeholderScreens/tenderManager/TenderManagerIndex.vue'),
+            import('@/stakeholderScreens/retailer/RetailerIndex.vue'),
         children: [
             {
                 path: 'dashboard',
-                name: 'TenderDashboard',
+                name: 'RetailerDashboard',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/TendersDashboard.vue'
+                        '@/stakeholderScreens/retailer/RetailerDashboard.vue'
                     ),
             },
             {
-                path: 'activeTenders',
-                name: 'ActiveTenders',
+                path: 'activeLots',
+                name: 'ActiveLots',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/ActiveTenders.vue'
+                        '@/stakeholderScreens/retailer/src/ActiveLots.vue'
                     ),
             },
             {
@@ -249,26 +178,26 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/pendingReview/PendingReviewMain.vue'
+                        '@/stakeholderScreens/retailer/src/pendingReview/PendingReviewMain.vue'
                     ),
             },
             {
 
-                path: 'review/tenderDetails',
-                name: 'TenderDetails',
+                path: 'review/lotDetails',
+                name: 'LotDetails',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/pendingReview/TenderDetails.vue'
+                        '@/stakeholderScreens/retailer/src/pendingReview/LotDetails.vue'
                     ),
             },
             {
-                name: 'RejectedTenderDetails',
-                path: 'RejectedTenderDetails',
+                name: 'RejectedLotDetails',
+                path: 'RejectedLotDetails',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/RejectedTenderDetails.vue'
+                        '@/stakeholderScreens/retailer/src/RejectedLotDetails.vue'
                     ),
             },
 
@@ -278,53 +207,53 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/pendingReview/Corregendum.vue'
+                        '@/stakeholderScreens/retailer/src/pendingReview/Corregendum.vue'
                     ),
             },
             {
                 path: 'review/success',
-                name: 'AcceptTender',
+                name: 'AcceptLot',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/pendingReview/AcceptTender.vue'
+                        '@/stakeholderScreens/retailer/src/pendingReview/AcceptLot.vue'
                     ),
             },
             {
-                name: 'RejectTender',
-                path: 'rejectTender',
+                name: 'RejectLot',
+                path: 'rejectLot',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/pendingReview/RejectTender.vue'
+                        '@/stakeholderScreens/retailer/src/pendingReview/RejectLot.vue'
                     ),
             },
             {
-                path: 'rejectedTenders',
-                name: 'RejectedTenders',
+                path: 'rejectedLots',
+                name: 'RejectedLots',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/RejectedTenders.vue'
+                        '@/stakeholderScreens/retailer/src/RejectedLots.vue'
                     ),
             },
 
             {
-                path: 'upcomingTenders',
-                name: 'UpcomingTenders',
+                path: 'UpcomingLots',
+                name: 'UpcomingLots',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/upcoming/UpcomingTenders.vue'
+                        '@/stakeholderScreens/retailer/src/upcoming/UpcomingLots.vue'
                     ),
             },
             {
-                path: 'inviteBidder',
-                name: 'InviteBidder',
+                path: 'inviteProduct',
+                name: 'InviteProduct',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/upcoming/InviteBidder.vue'
+                        '@/stakeholderScreens/retailer/src/upcoming/InviteProduct.vue'
                     ),
             },
             {
@@ -333,7 +262,7 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/ViewSubmissions.vue'
+                        '@/stakeholderScreens/retailer/src/ViewSubmissions.vue'
                     ),
             },
             {
@@ -342,19 +271,14 @@ const routes = [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/tenderManager/src/TrackStatus.vue'
+                        '@/stakeholderScreens/retailer/src/TrackStatus.vue'
                     ),
             },
         ],
     },
-    // register screen part of onboarding screen
-    {
-        path: '/register',
-        name: 'Register',
-        props: true,
-        component: () => import('../views/Register.vue'),
-    },
-    // onBoarding
+
+    /** 6. Onboarding */
+
     {
         path: '/onboarding',
         name: 'OnBoardingIndex',
@@ -365,7 +289,7 @@ const routes = [
                 path: 'review/pending',
                 name: 'UserPendingReview',
                 props: true,
-                component: () => import('@/stakeholderScreens/onBoarding/user/BidderPendingReview.vue'),
+                component: () => import('@/stakeholderScreens/onBoarding/user/FarmerPendingReview.vue'),
             },
             {
                 path: 'review/details',
@@ -397,8 +321,6 @@ const routes = [
                         '@/stakeholderScreens/onBoarding/user/AllUserRoles.vue'
                     ),
             },
-
-
             {
                 path: 'OnboardingDashboard',
                 name: 'OnboardingDashboard',
@@ -410,7 +332,9 @@ const routes = [
             },
         ],
     },
-    // Auditor
+
+    /** 10. Auditor Stakeholder */
+
     {
        path: '/auditorIndex',
        name: 'AuditorIndex',
@@ -435,7 +359,8 @@ const routes = [
        ]
     },
 
-    // Consumer
+    /** 7. Consumer Stakeholder */
+
     {
         path: '/consumer',
         name: 'ConsumerIndex',
@@ -444,12 +369,12 @@ const routes = [
             import('@/stakeholderScreens/consumer/ConsumerIndex'),
         children: [
             {
-                path: 'assignedBids',
-                name: 'AssignedBids',
+                path: 'assignedProducts',
+                name: 'AssignedProducts',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/consumer/src/AssignedBids.vue'
+                        '@/stakeholderScreens/consumer/src/AssignedProducts.vue'
                     ),
             },
 
@@ -469,10 +394,10 @@ const routes = [
             },
 
             {
-                path: 'Scanner',
-                name: 'Scanner',
+                path: 'consumerScanner',
+                name: 'ConsumerScanner',
                 props: true,
-                component: () => import('@/stakeholderScreens/consumer/src/CustomerScanner.vue'),
+                component: () => import('@/stakeholderScreens/consumer/src/ConsumerScanner.vue'),
             },
 
             {
@@ -482,8 +407,8 @@ const routes = [
             },
 
             {
-                path: 'ExpertDashboard',
-                name: 'ExpertDashboard',
+                path: 'dashboard',
+                name: 'ConsumerDashboard',
                 props: true,
                 component: () =>
                     import(
@@ -492,193 +417,116 @@ const routes = [
             },
 
             {
-                path: 'reviewTechnicalBid',
-                name: 'ReviewTechnicalBid',
+                path: 'reviewTechnicalProduct',
+                name: 'ReviewTechnicalProduct',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/consumer/src/ReviewTechnicalBid.vue'
+                        '@/stakeholderScreens/consumer/src/ReviewTechnicalProduct.vue'
                     ),
             },
 
             {
-                path: 'reviewFinancialBid',
+                path: 'reviewFinancialProduct',
                 props: true,
-                name: 'ReviewFinancialBid',
+                name: 'ReviewFinancialProduct',
                 component: () =>
                     import(
-                        '@/stakeholderScreens/consumer/src/ReviewFinancialBid.vue'
+                        '@/stakeholderScreens/consumer/src/ReviewFinancialProduct.vue'
                     ),
             },
 
-
-            // {
-            //     path: 'reviewBid',
-            //     name: 'ReviewBid',
-            //     component: () =>
-            //         import(
-            //             '@/stakeholderScreens/consumer/src/ReviewBid.vue'
-            //         ),
-            //     children: [
-            //         {
-            //             path: 'administrativeEval',
-            //             name: 'AdministrativeEval',
-            //             component: () =>
-            //                 import(
-            //                     '@/stakeholderScreens/consumer/src/reviewBid/AdministrativeEval.vue'
-            //                 ),
-            //         },
-            //         {
-            //             path: 'technicalEval',
-            //             name: 'TechnicalEval',
-            //             component: () =>
-            //                 import(
-            //                     '@/stakeholderScreens/consumer/src/reviewBid/TechnicalEval.vue'
-            //                 ),
-            //         },
-            //         {
-            //             path: 'financialEval',
-            //             name: 'FinalcialEval',
-            //             component: () =>
-            //                 import(
-            //                     '@/stakeholderScreens/consumer/src/reviewBid/FinancialEval.vue'
-            //                 ),
-            //         },
-            //         {
-            //             path: 'performance',
-            //             name: 'PerformanceBidEval',
-            //             component: () =>
-            //                 import(
-            //                     '@/stakeholderScreens/consumer/src/reviewBid/Performance.vue'
-            //                 ),
-            //         },
-            //         {
-            //             path: 'awardCertificate',
-            //             name: 'AwardCertificate',
-            //             component: () =>
-            //                 import(
-            //                     '@/stakeholderScreens/consumer/src/reviewBid/AwardCertificate.vue'
-            //                 ),
-            //         },
-            //     ],
-            // },
+            // TODO:: Confirm if this section needs to be kept
+            {
+                path: 'reviewProduct',
+                name: 'ReviewProduct',
+                component: () =>
+                    import(
+                        '@/stakeholderScreens/consumer/src/ReviewProduct-bak.vue'
+                    ),
+                children: [
+                    {
+                        path: 'administrativeEval',
+                        name: 'AdministrativeEval',
+                        component: () =>
+                            import(
+                                '@/stakeholderScreens/consumer/src/reviewProduct-bak/AdministrativeEval.vue'
+                            ),
+                    },
+                    {
+                        path: 'technicalEval',
+                        name: 'TechnicalEval',
+                        component: () =>
+                            import(
+                                '@/stakeholderScreens/consumer/src/reviewProduct-bak/TechnicalEval.vue'
+                            ),
+                    },
+                    {
+                        path: 'financialEval',
+                        name: 'FinancialEval',
+                        component: () =>
+                            import(
+                                '@/stakeholderScreens/consumer/src/reviewProduct-bak/FinancialEval.vue'
+                            ),
+                    },
+                    {
+                        path: 'performance',
+                        name: 'PerformanceProductEval',
+                        component: () =>
+                            import(
+                                '@/stakeholderScreens/consumer/src/reviewProduct-bak/Performance.vue'
+                            ),
+                    },
+                    {
+                        path: 'awardCertificate',
+                        name: 'AwardCertificate',
+                        component: () =>
+                            import(
+                                '@/stakeholderScreens/consumer/src/reviewProduct-bak/AwardCertificate.vue'
+                            ),
+                    },
+                ],
+            },
         ],
     },
 
+    /** 8. Government Stakeholder */
 
-
-
-
-
-//Shipper
-
-{
-    path: '/shipper',
-    name: 'ShipperIndex',
-    props: true,
-    component: () =>
-    import('@/stakeholderScreens/shipper/ShipperIndex.vue'),
-children: [
-        {
-            path: 'ActiveOrders',
-            name: 'ActiveOrders',
-            props: true,
-            component: () => import('@/stakeholderScreens/shipper/src/ActiveOrders.vue'),
-        },
-        {
-            path: 'ShippingOrderDetails',
-            name: 'ShippingOrderDetails',
-            props: true,
-            component: () => import('@/stakeholderScreens/shipper/src/ShippingOrderDetails.vue'),
-        },
-
-        {
-            path: 'NewOrderDetails',
-            name: 'NewOrderDetails',
-            props: true,
-            component: () => import('@/stakeholderScreens/shipper/src/NewOrderDetails.vue'),
-        },
-        {
-            path: 'OrderStatus',
-            name: 'OrderStatus',
-            props: true,
-            component: () => import('@/stakeholderScreens/shipper/src/OrderStatus.vue'),
-        },
-        {
-            path: 'ShippingHistory',
-            name: 'ShippingHistory',
-            props: true,
-            component: () => import('@/stakeholderScreens/shipper/src/History.vue'),
-        },
-        {
-            path: 'NewOrders',
-            name: 'NewOrders',
-            props: true,
-            component: () => import('@/stakeholderScreens/shipper/src/NewOrders.vue'),
-        },
-
-        {
-            path: 'Notify',
-            name: 'Notify',
-            props: true,
-            component: () => import('@/stakeholderScreens/shipper/src/Notify.vue'),
-        },
-        {
-            path: 'ShipperDashboard',
-            name: 'ShipperDashboard',
-            props: true,
-            component: () => import('@/stakeholderScreens/shipper/ShipperDashboard.vue'),
-        },
-        {
-            path: 'Ports',
-            name: 'Ports',
-            props: true,
-            component: () => import('@/stakeholderScreens/shipper/src/Ports.vue'),
-        },
-
-
-    ],
-},
-
-
-    // Bid Evaluation Chairman
-
-    // Bid Evaluation Chairman
     {
-        path: '/bidEvalChairman',
-        name: 'BidEvalChairman',
+        path: '/government',
+        name: 'GovernmentIndex',
         props: true,
         component: () =>
             import(
-                '@/stakeholderScreens/bidEvaluationChairman/BidEvalChairmanIndex.vue'
+                '@/stakeholderScreens/government/GovernmentIndex.vue'
             ),
         children: [
             {
                 path: 'dashboard',
-                name: 'BidEvalChairmanDashboard',
+                name: 'GovernmentDashboard',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvaluationChairman/BidEvalChairmanDashboard.vue'
+                        '@/stakeholderScreens/government/GovernmentDashboard.vue'
                     ),
             },
             {
-                path: 'activeTenders',
-                name: 'ActiveTendersForChairman',
+                path: 'activeLots',
+                name: 'ActiveLotsForGovernment',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvaluationChairman/src/ActiveTendersForChairman.vue'
+                        '@/stakeholderScreens/government/src/ActiveLotsForGovernment.vue'
                     ),
             },
 
             {
-                path: 'TenderDetailsForChairman',
-                name: 'TenderDetailsForChairman',
+                path: 'LotDetailsForGovernment',
+                name: 'LotDetailsForGovernment',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvaluationChairman/src/TenderDetailsForChairman.vue'
+                        '@/stakeholderScreens/government/src/LotDetailsForGovernment.vue'
                     ),
             },
             {
@@ -687,16 +535,16 @@ children: [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvaluationChairman/src/PendingAssignments.vue'
+                        '@/stakeholderScreens/government/src/PendingAssignments.vue'
                     ),
             },
             {
                 path: 'viewAll',
-                name: 'ViewAllBids',
+                name: 'ViewAllProducts',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvaluationChairman/src/ViewAllBids.vue'
+                        '@/stakeholderScreens/government/src/ViewAllProducts.vue'
                     ),
             },
             {
@@ -705,25 +553,25 @@ children: [
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvaluationChairman/src/assignExpert/AssignExperts.vue'
+                        '@/stakeholderScreens/government/src/assignExpert/AssignExperts.vue'
                     ),
             },
             {
-                path: 'trackBidStatus',
-                name: 'TrackBidStatus',
+                path: 'trackProductStatus',
+                name: 'TrackProductStatus',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/bidEvaluationChairman/src/trackBidStatusMain.vue'
+                        '@/stakeholderScreens/government/src/trackProductStatusMain.vue'
                     ),
                 children: [
                     {
                         path: 'status',
-                        name: 'bidEvalChairmanBidStatus',
+                        name: 'TrackProductStatus',
                         props: true,
                         component: () =>
                             import(
-                                '@/stakeholderScreens/bidEvaluationChairman/src/trackbidStatus/TrackBidStatus.vue'
+                                '@/stakeholderScreens/government/src/trackProductStatus/TrackProductStatus.vue'
                             ),
                     },
                     {
@@ -732,7 +580,7 @@ children: [
                         props: true,
                         component: () =>
                             import(
-                                '@/stakeholderScreens/bidEvaluationChairman/src/trackbidStatus/ScoredResponses.vue'
+                                '@/stakeholderScreens/government/src/trackProductStatus/ScoredResponses.vue'
                             ),
                     },
                     {
@@ -741,7 +589,7 @@ children: [
                         props: true,
                         component: () =>
                             import(
-                                '@/stakeholderScreens/bidEvaluationChairman/src/trackbidStatus/ResultSummary.vue'
+                                '@/stakeholderScreens/government/src/trackProductStatus/ResultSummary.vue'
                             ),
                     },
                     {
@@ -750,7 +598,7 @@ children: [
                         props: true,
                         component: () =>
                             import(
-                                '@/stakeholderScreens/bidEvaluationChairman/src/trackbidStatus/EvaluationReport.vue'
+                                '@/stakeholderScreens/government/src/trackProductStatus/EvaluationReport.vue'
                             ),
                     },
                 ],
@@ -758,7 +606,8 @@ children: [
         ],
     },
 
-    //Farmer
+    /** 1. Farmer Stakeholder */
+
     {
         path: '/farmer',
         name: 'FarmerIndex',
@@ -822,7 +671,7 @@ children: [
                     import('@/stakeholderScreens/farmer/src/BookedForSupplierConfirmationScreen.vue'),
             },
             {
-                path: 'submittedBids/productStatus',
+                path: 'submittedProducts/productStatus',
                 name: 'ProductTrackStatus',
                 props: true,
                 component: () =>
@@ -832,10 +681,10 @@ children: [
             },
             {
                 path: 'notifications',
-                name: 'Notifications',
+                name: 'FarmerNotifications',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/farmer/src/Notifications.vue'),
+                    import('@/stakeholderScreens/farmer/src/FarmerNotifications.vue'),
             },
             // {
             //     path: 'lotRecordsList',
@@ -857,17 +706,17 @@ children: [
                 component: () => import('@/stakeholderScreens/farmer/src/ModeOfTransportFarmer.vue')
             },
             {
-                path: 'activeTenders',
-                name: 'ActiveTendersView',
+                path: 'activeLots',
+                name: 'ActiveLotsView',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/farmer/src/ActiveTendersView.vue'
+                        '@/stakeholderScreens/farmer/src/ActiveLotsView.vue'
                     ),
             },
             {
-                path: 'submitBid',
-                name: 'SubmitBid',
+                path: 'submitProduct',
+                name: 'SubmitProduct',
                 props: true,
                 component: () =>
                     import(
@@ -875,176 +724,52 @@ children: [
                     ),
             },
             {
-                path: 'tenderDetailsForBidder',
-                name: 'TenderDetailsForBidder',
+                path: 'lotDetailsForFarmer',
+                name: 'LotDetailsForFarmer',
                 props: true,
                 component: () =>
                     import(
-                        '@/stakeholderScreens/farmer/src/TenderDetailsForBidder.vue'
+                        '@/stakeholderScreens/farmer/src/LotDetailsForFarmer.vue'
                     ),
             },
         ],
     },
 
-    // International Bidder
-    {
-        path: '/internationalBidder',
-        name: 'InternationalBidderIndex',
-        props: true,
-        component: () => import('@/stakeholderScreens/internationalBidder/InternationalBidderIndex.vue'),
-        children: [
-            {
-                path: 'dashboard',
-                name: 'InternationalBidderDashboard',
-                props: true,
-                component: () =>
-                    import('@/stakeholderScreens/internationalBidder/InternationalBidderDashboard.vue'),
-            },
-            {
-                path: 'profile',
-                name: 'InternationalBidderProfile',
-                props: true,
-                component: () =>
-                    import('@/stakeholderScreens/internationalBidder/src/InternationalBidderProfile.vue'),
-            },
-            {
-                path: 'submittedBids',
-                name: 'InternationalSubmittedBids',
-                props: true,
-                component: () =>
-                    import('@/stakeholderScreens/internationalBidder/src/InternationalSubmittedBids.vue'),
-            },
-            // {
-            //     path: 'submittedBids/bidStatus',
-            //     name: 'BidTrackStatus',
-            //     props: true,
-            //     component: () =>
-            //         import(
-            //             '@/stakeholderScreens/internationalBidder/src/ProductTrackStatus.vue'
-            //             ),
-            // },
-            {
-                path: 'notifications',
-                name: 'InternationalNotifications',
-                props: true,
-                component: () =>
-                    import('@/stakeholderScreens/internationalBidder/src/InternationalNotifications.vue'),
-            },
-            {
-                path: 'tendersList',
-                name: 'InternationalTendersList',
-                props: true,
-                component: () =>
-                    import('@/stakeholderScreens/internationalBidder/src/InternationalTendersList.vue'),
-            },
-            // {
-            //     path: 'activeTenders',
-            //     name: 'ActiveTendersView',
-            //     props: true,
-            //     component: () =>
-            //         import(
-            //             '@/stakeholderScreens/farmer/src/ActiveTendersView.vue'
-            //             ),
-            // },
-            // {
-            //     path: 'submitBid',
-            //     name: 'SubmitBid',
-            //     props: true,
-            //     component: () =>
-            //         import(
-            //             '@/stakeholderScreens/farmer/src/SubmitProduct.vue'
-            //             ),
-            // },
-            // {
-            //     path: 'tenderDetailsForBidder',
-            //     name: 'TenderDetailsForBidder',
-            //     props: true,
-            //     component: () =>
-            //         import(
-            //             '@/stakeholderScreens/farmer/src/TenderDetailsForBidder.vue'
-            //             ),
-            // },
-        ],
-    },
+    /** 3. Distributor Stakeholder */
 
-    // Freight Forwarder
     {
-        path: '/freight',
-        name: 'FreightIndex',
-        component: () => import('@/stakeholderScreens/freightForwarder/FreightIndex.vue'),
-        children: [
-            {
-                path: 'freightDashBoard',
-                name: 'FreightDashBoard',
-                component: () => import('@/stakeholderScreens/freightForwarder/FreightDashBoard.vue')
-            },
-            {
-                path: 'createFreightOrder',
-                name: 'CreateFreightOrder',
-                component: () => import('@/stakeholderScreens/freightForwarder/src/CreateFreightOrder.vue')
-            },
-            {
-                path: 'modeOfTransport',
-                name: 'ModeOfTransport',
-                component: () => import('@/stakeholderScreens/freightForwarder/src/ModeOfTransport.vue')
-            },
-            {
-                path: 'offlineDiscussion',
-                name: 'OfflineDiscussion',
-                component: () => import('@/stakeholderScreens/freightForwarder/src/OfflineDiscussion.vue')
-            },
-            {
-                path: 'pendingFreightRequest',
-                name: 'PendingFreightRequest',
-                component: () => import('@/stakeholderScreens/freightForwarder/src/PendingFreightRequest.vue')
-            },
-            {
-                path: 'statusOfFreight',
-                name: 'StatusOfFreight',
-                component: () => import('@/stakeholderScreens/freightForwarder/src/StatusOfFreight.vue')
-            },
-            {
-                path: 'productDeliveryStatus',
-                name: 'ProductDeliveryStatus',
-                component: () => import('@/stakeholderScreens/freightForwarder/src/ProductDeliveryStatus.vue')
-            },
-        ],
-    },
-
-    //Clearing Agency
-    {
-        path: '/clearingAgency',
-        name: 'ClearingAgencyIndex',
+        path: '/distributor',
+        name: 'DistributorIndex',
         props: true,
-        component: () => import('@/stakeholderScreens/clearingAgency/ClearingAgencyIndex.vue'),
+        component: () => import('@/stakeholderScreens/distributor/DistributorIndex.vue'),
         children: [
             {
-                path: 'clearingAgencyDashboard',
-                name: 'ClearingAgencyDashboard',
+                path: 'distributorDashboard',
+                name: 'DistributorDashboard',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/clearingAgency/ClearingAgencyDashboard.vue'),
+                    import('@/stakeholderScreens/distributor/DistributorDashboard.vue'),
             },
             {
-                path: 'customClearanceOrders',
-                name: 'CustomClearanceOrders',
+                path: 'producerProductLots',
+                name: 'ProducerProductLots',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/clearingAgency/src/CustomClearanceOrders.vue'),
+                    import('@/stakeholderScreens/distributor/src/ProducerProductLots.vue'),
             },
             {
-                path: 'allFreightOrders',
-                name: 'AllFreightOrders',
+                path: 'allProductLots',
+                name: 'AllProductLots',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/clearingAgency/src/AllFreightOrders.vue'),
+                    import('@/stakeholderScreens/distributor/src/AllProductLots.vue'),
             },
             {
-                path: 'trackFreightOrders',
-                name: 'TrackFreightOrders',
+                path: 'trackProductLots',
+                name: 'TrackProductLots',
                 props: true,
                 component: () =>
-                    import('@/stakeholderScreens/clearingAgency/src/TrackFreightOrders.vue'),
+                    import('@/stakeholderScreens/distributor/src/TrackProductLots.vue'),
             },
 
         ],

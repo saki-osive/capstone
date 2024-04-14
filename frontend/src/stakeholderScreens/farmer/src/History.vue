@@ -18,7 +18,7 @@
             </v-col>
         </v-row>
 
-        <h1 class="text-center">Tenders</h1>
+        <h1 class="text-center">Lots</h1>
         <br />
 
         <v-container class="mx-12">
@@ -42,7 +42,7 @@
                         small
                         v-model="item.status"
                         text
-                        :to="{ name: 'BidTrackStatus' }"
+                        :to="{ name: 'ProductTrackStatus' }"
                         >Track</v-btn
                     >
                 </template>
@@ -63,7 +63,7 @@
             <v-dialog v-model="dialog" max-width="290">
                 <v-card>
                     <v-toolbar-title class="blue lighten-3 pa-4"
-                        >Want to withdraw this bid?</v-toolbar-title
+                        >Want to withdraw this product?</v-toolbar-title
                     >
 
                     <v-text-field

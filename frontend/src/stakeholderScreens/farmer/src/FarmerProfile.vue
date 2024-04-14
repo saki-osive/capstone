@@ -37,7 +37,7 @@
 
                 <v-row>
                     <v-col cols="3">
-                        <header>Bidder ID</header>
+                        <header>Farmer ID</header>
                     </v-col>
                     <v-col cols="3" class="pt-0 ">
                         <v-text-field outlined />
@@ -56,7 +56,7 @@
                 <v-row>
                     <v-col class="ml-12 pl-12">
                         <v-col cols="3">
-                            <header>Bidder Status</header>
+                            <header>Farmer Status</header>
                         </v-col>
                         <v-radio-group>
                             <v-radio label="Active"></v-radio>
@@ -67,7 +67,7 @@
 
                     <v-col>
                         <v-col cols="3">
-                            <header>Bidder Type</header>
+                            <header>Farmer Type</header>
                         </v-col>
                         <v-radio-group>
                             <v-radio label="Business"></v-radio>
@@ -104,7 +104,7 @@
                             <v-expansion-panel>
                                 <v-expansion-panel-header
                                     >List of Submitted
-                                    Bids</v-expansion-panel-header
+                                    Products</v-expansion-panel-header
                                 >
                                 <v-expansion-panel-content>
                                     Coming soon

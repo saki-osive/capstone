@@ -14,7 +14,7 @@
         </v-row>
         <v-row>
             <v-col cols="6">TENDER REF:</v-col>
-            <v-col cols="3">{{ gailIndiaTenderRef }}</v-col>
+            <v-col cols="3">{{ gailIndiaLotRef }}</v-col>
         </v-row>
         <p>
             <Strong>Address Data</Strong>

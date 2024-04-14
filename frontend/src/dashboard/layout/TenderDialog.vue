@@ -2,7 +2,7 @@
     <v-row justify="center">
         <v-dialog v-model="dialog" scrollable width="600px">
             <v-card>
-                <v-card-title>Tender Details</v-card-title>
+                <v-card-title>Lot Details</v-card-title>
                 <v-divider></v-divider>
                 <v-card-text style="height: 300px;">
                     <div class="text-left">
@@ -12,23 +12,23 @@
                         </v-row>
                         <v-row>
                             <v-col cols="6"
-                                >Tender Reference Number and Date :</v-col
+                                >Lot Reference Number and Date :</v-col
                             >
                             <v-col cols="3">{{
-                                tenderReferenceNumberAndDate
+                                lotReferenceNumberAndDate
                             }}</v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="6">Tender Opening Date:</v-col>
-                            <v-col cols="3">{{ tenderOpeningDate }}</v-col>
+                            <v-col cols="6">Lot Opening Date:</v-col>
+                            <v-col cols="3">{{ lotOpeningDate }}</v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="6">Type of Bidding System:</v-col>
-                            <v-col cols="3">{{ typeOfBiddingSystem }}</v-col>
+                            <v-col cols="6">Type of Product System:</v-col>
+                            <v-col cols="3">{{ typeOfLotSystem }}</v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="6">Tender Type:</v-col>
-                            <v-col cols="3">{{ tenderType }}</v-col>
+                            <v-col cols="6">Lot Type:</v-col>
+                            <v-col cols="3">{{ lotType }}</v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="6">Form of contract:</v-col>
@@ -39,16 +39,16 @@
                             <v-col cols="3">{{ noOfCover }}</v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="6">Tender Category:</v-col>
-                            <v-col cols="3">{{ tenderCategory }}</v-col>
+                            <v-col cols="6">Lot Category:</v-col>
+                            <v-col cols="3">{{ lotCategory }}</v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="6">Account Type Head:</v-col>
                             <v-col cols="3">{{ accountTypeHead }}</v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="6">No of Bid Openers:</v-col>
-                            <v-col cols="3">{{ noOfBidOpeners }}</v-col>
+                            <v-col cols="6">No of Product Openers:</v-col>
+                            <v-col cols="3">{{ noOfProductOpeners }}</v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="6"
@@ -68,26 +68,26 @@
                         </v-row>
                         <v-row>
                             <v-col cols="6"
-                                >Date, Time & Venu of Pre-Bid Meeting :</v-col
+                                >Date, Time & Venu of Pre-Product Meeting :</v-col
                             >
                             <v-col cols="3">{{
-                                dateTimeVenuOfPreBidMeeting
+                                dateTimeVenuOfPreProductMeeting
                             }}</v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="6"
-                                >Due Date and Time for Bid Submission :</v-col
+                                >Due Date and Time for Product Submission :</v-col
                             >
                             <v-col cols="3">{{
-                                dueDateAndTimeForBidSubmission
+                                dueDateAndTimeForProductSubmission
                             }}</v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="6"
-                                >Date & Time of Un-Priced Bid Opening :</v-col
+                                >Date & Time of Un-Priced Product Opening :</v-col
                             >
                             <v-col cols="3">{{
-                                dateAndTimeUnPricedBidOpening
+                                dateAndTimeUnPricedProductOpening
                             }}</v-col>
                         </v-row>
                         <v-row>
@@ -124,7 +124,7 @@
 </template>
 <script>
 export default {
-    name: 'TenderDialog',
+    name: 'LotDialog',
     methods: {
         show2() {
             this.dialog = true
@@ -135,20 +135,20 @@ export default {
             dialog: false,
 
             briefScopeOfWork: '',
-            tenderReferenceNumberAndDate: '',
-            tenderOpeningDate: '',
-            typeOfBiddingSystem: '',
-            tenderType: '',
+            lotReferenceNumberAndDate: '',
+            lotOpeningDate: '',
+            typeOfLotSystem: '',
+            lotType: '',
             formOfContract: '',
             noOfCover: '',
-            tenderCategory: '',
+            lotCategory: '',
             accountTypeHead: '',
-            noOfBidOpeners: '',
+            noOfProductOpeners: '',
             shouldAllowOfflineSubmission: '',
             shouldAllowTechnicalEvaluation: '',
-            dateTimeVenuOfPreBidMeeting: '',
-            dueDateAndTimeForBidSubmission: '',
-            dateAndTimeUnPricedBidOpening: '',
+            dateTimeVenuOfPreProductMeeting: '',
+            dueDateAndTimeForProductSubmission: '',
+            dateAndTimeUnPricedProductOpening: '',
             contactName: '',
             emailPhoneNO: '',
             shouldAllowMultiCurrency: '',

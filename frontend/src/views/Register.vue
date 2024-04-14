@@ -291,7 +291,7 @@ export default {
                 password: '',
                 companyName: '',
                 gailVendorCode: '',
-                gailTenderRef: '',
+                gailLotRef: '',
                 language: '',
                 telephone: '',
                 mobile: '',

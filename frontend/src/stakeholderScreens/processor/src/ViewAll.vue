@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-toolbar class="blue lighten-2">
-            <v-toolbar-title>Bidders</v-toolbar-title>
+            <v-toolbar-title>Farmers</v-toolbar-title>
         </v-toolbar>
         <v-alert>All users status can be seen here.</v-alert>
         <v-container mx-auto>
@@ -56,7 +56,7 @@ export default {
                     value: 'id',
                 },
                 {
-                    text: 'Bidder/ Company Name',
+                    text: 'Farmer/ Company Name',
                     value: 'CompanyName',
                 },
                 {

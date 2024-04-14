@@ -131,7 +131,7 @@
         dialogBlobText:"",
         intro:"Assigning transaction_id:  0788d105901c9f12316bb84dc1c5345be6fe96edf626d427de9871cefac4f063\n" +
                 "Transaction proposal was good\n" +
-                "Response payload: {\"$class\":\"org.tender.tenderModel.PriceCalculation\n" +
+                "Response payload: {\"$class\":\"org.lot.lotModel.PriceCalculation\n" +
                 "Successfully sent Proposal and received ProposalResponse: Status - 200, message - \"\"\n" +
                 "The transaction has been committed on peer localhost:7051\n" +
                 "Send transaction promise and event listener promise have completed\n" +

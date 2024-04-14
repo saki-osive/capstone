@@ -45,9 +45,9 @@ export default {
                     route: { name: 'FarmerIndex' },
                 },
                 // {
-                //   title: 'InternationalBidder',
+                //   title: 'InternationalFarmer',
                 //   icon: 'fa-circle',
-                //   route: { name: 'InternationalBidderIndex' },
+                //   route: { name: 'InternationalFarmerIndex' },
                 // },
 
                 {
@@ -56,16 +56,22 @@ export default {
                     route: { name: 'ProcessorIndex' },
                 },
 
+                // {
+                //   title: 'Distributor',
+                //   icon: 'fa-cube',
+                //   route: { name: 'LotCreatorIndex' },
+                // },
+
                 {
                   title: 'Distributor',
-                  icon: 'fa-cube',
-                  route: { name: 'TenderCreatorIndex' },
+                  icon: ' fa-check-circle',
+                  route: { name: 'DistributorIndex' },
                 },
 
                 {
                   title: 'Retailer',
                   icon: 'fa-cube',
-                  route: { name: 'TenderManagerIndex' },
+                  route: { name: 'RetailerIndex' },
                 },
 
                 {
@@ -89,7 +95,7 @@ export default {
                 {
                     title: 'Government',
                     icon: 'fa-id-card',
-                    route: { name: 'BidEvalChairman' },
+                    route: { name: 'GovernmentIndex' },
                 },
                 {
                   title: 'Auditor',
@@ -105,11 +111,6 @@ export default {
                 //     title: 'Shipper',
                 //     icon: 'fa-id-card',
                 //     route: { name: 'ShipperIndex' },
-                // },
-                // {
-                //   title: 'Clearing Agency',
-                //   icon: ' fa-check-circle',
-                //   route: { name: 'ClearingAgencyIndex' },
                 // },
             ],
         }

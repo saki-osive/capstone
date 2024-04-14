@@ -34,7 +34,7 @@
 <!--                dark-->
 <!--                small-->
 <!--                text-->
-<!--                :to="{ name: 'TenderDetailsView' }"-->
+<!--                :to="{ name: 'LotDetailsView' }"-->
 <!--                >Resubmit</v-btn-->
 <!--            >-->
         </div>

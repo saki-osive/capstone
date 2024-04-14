@@ -36,27 +36,27 @@ export default {
                 {
                     title: 'Dashboard',
                     icon: 'fa-home',
-                    route: {name: 'ExpertDashboard'},
+                    route: {name: 'ConsumerDashboard'},
                 },
                 {
                     title: 'Track Product Journey',
                     icon: 'fa-cube',
-                    route: { name: 'Scanner' },
+                    route: { name: 'ConsumerScanner' },
                 },
                 {
                   title: 'View Product Details',
                   icon: 'fa-binoculars',
-                  route: {name: 'ExpertDashboard'},
+                  route: {name: 'ConsumerDashboard'},
                 },
                 {
                   title: 'Provide Feedback',
                   icon: 'fa-square',
-                  route: { name: 'AssignedBids' },
+                  route: { name: 'AssignedProducts' },
                 },
                 {
                   title: 'Access Educational Content',
                   icon: 'fa-id-card',
-                  route: {name: 'ExpertDashboard'},
+                  route: {name: 'ConsumerDashboard'},
                 },
                 {
                   title: 'Profile',

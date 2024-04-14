@@ -12,13 +12,13 @@
           >14 new submitted bids</v-card
           >
           <v-card class="ma-3 pa-6" outlined tile
-          >25 Active Tenders</v-card
+          >25 Active Lots</v-card
           >
           <v-card class="ma-3 pa-6" outlined tile
-          >7 Approved Bids</v-card
+          >7 Approved Products</v-card
           >
           <v-card class="ma-3 pa-6" outlined tile
-          >5 Rejected Bids</v-card
+          >5 Rejected Products</v-card
           >
         </v-row>
       </v-col>
@@ -45,8 +45,8 @@
           ></v-sparkline>
 
           <v-card-text class="pt-0">
-            <div class="title font-weight-light mb-2">Active Bids</div>
-            <div class="subheading font-weight-light grey--text">Active Bids in month of July </div>
+            <div class="title font-weight-light mb-2">Active Products</div>
+            <div class="subheading font-weight-light grey--text">Active Products in month of July </div>
             <v-divider class="my-2"></v-divider>
             <v-icon
                 class="mr-2"
@@ -87,7 +87,7 @@
           </v-sheet>
 
           <v-card-text class="pt-0">
-            <div class="title font-weight-light mb-2">Total Bids</div>
+            <div class="title font-weight-light mb-2">Total Products</div>
             <div class="subheading font-weight-light grey--text">Total bids submitted in june and july </div>
             <v-divider class="my-2"></v-divider>
             <v-icon

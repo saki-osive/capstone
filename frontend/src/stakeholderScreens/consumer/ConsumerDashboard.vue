@@ -140,7 +140,7 @@
 const gradients = [['red', 'orange', 'yellow']]
 
 export default {
-    name: 'CVOProfile',
+    name: 'ConsumerDashboard',
     data() {
         return {
             rating: 4,
