@@ -9,12 +9,12 @@ import org.hyperledger.fabric.contract.annotation.Property;
 import org.json.JSONObject;
 
 @DataType()
-public class BidEvaluationCommitteeChaincode {
+public class GovernmentChaincode {
 
     @Property()
     private String value;
 
-    public BidEvaluationCommitteeChaincode(){
+    public GovernmentChaincode(){
     }
 
     public String getValue() {
@@ -29,9 +29,9 @@ public class BidEvaluationCommitteeChaincode {
         return new JSONObject(this).toString();
     }
 
-    public static TenderContract fromJSONString(String json) {
+    public static LotContract fromJSONString(String json) {
         String value = new JSONObject(json).getString("value");
-        TenderContract asset = new TenderContract();
+        LotContract asset = new LotContract();
         asset.setValue(value);
         return asset;
     }

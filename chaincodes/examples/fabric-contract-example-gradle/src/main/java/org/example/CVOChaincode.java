@@ -29,9 +29,9 @@ public class CVOChaincode {
         return new JSONObject(this).toString();
     }
 
-    public static TenderContract fromJSONString(String json) {
+    public static LotContract fromJSONString(String json) {
         String value = new JSONObject(json).getString("value");
-        TenderContract asset = new TenderContract();
+        LotContract asset = new LotContract();
         asset.setValue(value);
         return asset;
     }

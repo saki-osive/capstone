@@ -29,16 +29,16 @@ public class SupplyChainContracts {
         return new JSONObject(this).toString();
     }
 
-    public static TenderContract fromJSONString(String json) {
+    public static LotContract fromJSONString(String json) {
         String value = new JSONObject(json).getString("value");
-        TenderContract asset = new TenderContract();
+        LotContract asset = new LotContract();
         asset.setValue(value);
         return asset;
     }
 
     public void Shipper(){
         String value = new JSONObject().getString("value");
-        TenderContract asset = new TenderContract();
+        LotContract asset = new LotContract();
         asset.setValue(value);
 
     }
@@ -46,21 +46,21 @@ public class SupplyChainContracts {
     public void Transporter(){
 
         String value = new JSONObject().getString("value");
-        TenderContract asset = new TenderContract();
+        LotContract asset = new LotContract();
         asset.setValue(value);
     }
 
     public void FreightForwarder(){
 
         String value = new JSONObject().getString("value");
-        TenderContract asset = new TenderContract();
+        LotContract asset = new LotContract();
         asset.setValue(value);
     }
 
     public void Customs(){
 
         String value = new JSONObject().getString("value");
-        TenderContract asset = new TenderContract();
+        LotContract asset = new LotContract();
         asset.setValue(value);
     }
 
@@ -68,7 +68,7 @@ public class SupplyChainContracts {
     public void ClearingAgency(){
 
         String value = new JSONObject().getString("value");
-        TenderContract asset = new TenderContract();
+        LotContract asset = new LotContract();
         asset.setValue(value);
     }
 

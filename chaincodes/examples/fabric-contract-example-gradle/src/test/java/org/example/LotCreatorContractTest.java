@@ -20,14 +20,14 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 
-public final class TenderCreatorContractTest {
+public final class LotCreatorContractTest {
 
     @Nested
     class AssetExists {
         @Test
         public void noProperAsset() {
 
-            TenderCreatorContract contract = new TenderCreatorContract();
+            LotCreatorContract contract = new LotCreatorContract();
             Context ctx = mock(Context.class);
             ChaincodeStub stub = mock(ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -41,7 +41,7 @@ public final class TenderCreatorContractTest {
         @Test
         public void assetExists() {
 
-            TenderCreatorContract contract = new TenderCreatorContract();
+            LotCreatorContract contract = new LotCreatorContract();
             Context ctx = mock(Context.class);
             ChaincodeStub stub = mock(ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -55,7 +55,7 @@ public final class TenderCreatorContractTest {
 
         @Test
         public void noKey() {
-            TenderCreatorContract contract = new TenderCreatorContract();
+            LotCreatorContract contract = new LotCreatorContract();
             Context ctx = mock(Context.class);
             ChaincodeStub stub = mock(ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -74,7 +74,7 @@ public final class TenderCreatorContractTest {
 
         @Test
         public void newAssetCreate() {
-            TenderCreatorContract contract = new TenderCreatorContract();
+            LotCreatorContract contract = new LotCreatorContract();
             Context ctx = mock(Context.class);
             ChaincodeStub stub = mock(ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -88,7 +88,7 @@ public final class TenderCreatorContractTest {
 
         @Test
         public void alreadyExists() {
-            TenderCreatorContract contract = new TenderCreatorContract();
+            LotCreatorContract contract = new LotCreatorContract();
             Context ctx = mock(Context.class);
             ChaincodeStub stub = mock(ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -107,18 +107,18 @@ public final class TenderCreatorContractTest {
 
     @Test
     public void assetRead() {
-        TenderCreatorContract contract = new TenderCreatorContract();
+        LotCreatorContract contract = new LotCreatorContract();
         Context ctx = mock(Context.class);
         ChaincodeStub stub = mock(ChaincodeStub.class);
         when(ctx.getStub()).thenReturn(stub);
 
-        TenderContract asset = new TenderContract();
+        LotContract asset = new LotContract();
         asset.setValue("Valuable");
 
         String json = asset.toJSONString();
         when(stub.getState("10001")).thenReturn(json.getBytes(StandardCharsets.UTF_8));
 
-        TenderContract returnedAsset = contract.readMyAsset(ctx, "10001");
+        LotContract returnedAsset = contract.readMyAsset(ctx, "10001");
         assertEquals(returnedAsset.getValue(), asset.getValue());
     }
 
@@ -126,7 +126,7 @@ public final class TenderCreatorContractTest {
     class AssetUpdates {
         @Test
         public void updateExisting() {
-            TenderCreatorContract contract = new TenderCreatorContract();
+            LotCreatorContract contract = new LotCreatorContract();
             Context ctx = mock(Context.class);
             ChaincodeStub stub = mock(ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -140,7 +140,7 @@ public final class TenderCreatorContractTest {
 
         @Test
         public void updateMissing() {
-            TenderCreatorContract contract = new TenderCreatorContract();
+            LotCreatorContract contract = new LotCreatorContract();
             Context ctx = mock(Context.class);
             ChaincodeStub stub = mock(ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -158,7 +158,7 @@ public final class TenderCreatorContractTest {
 
     @Test
     public void assetDelete() {
-        TenderCreatorContract contract = new TenderCreatorContract();
+        LotCreatorContract contract = new LotCreatorContract();
         Context ctx = mock(Context.class);
         ChaincodeStub stub = mock(ChaincodeStub.class);
         when(ctx.getStub()).thenReturn(stub);
