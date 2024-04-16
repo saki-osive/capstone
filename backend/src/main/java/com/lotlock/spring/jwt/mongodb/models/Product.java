@@ -9,8 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 import java.util.List;
 
-@Document(collection = "bid")
-public class Bid {
+@Document(collection = "product")
+public class Product {
 
     @Id
     private String id;
@@ -22,7 +22,7 @@ public class Bid {
     private String agreementAccepted;
     private String nameOfCompany;
     private String gstNumber;
-    private String bidAmount;
+    private String productAmount;
 
     @CreatedDate
     private Date createdDate;
@@ -31,17 +31,17 @@ public class Bid {
     private Date modifiedDate;
 
     @DBRef
-    private List<BidItem> bidItems;
+    private List<ProductItem> productItems;
 
     @DBRef
-    private TenderModel tender;
+    private LotModel lot;
 
-    public List<BidItem> getBidItems() {
-        return bidItems;
+    public List<ProductItem> getProductItems() {
+        return productItems;
     }
 
-    public void setBidItems(List<BidItem> bidItems) {
-        this.bidItems = bidItems;
+    public void setProductItems(List<ProductItem> productItems) {
+        this.productItems = productItems;
     }
 
     public Date getCreatedDate() {
@@ -100,12 +100,12 @@ public class Bid {
         this.agreementAccepted = agreementAccepted;
     }
 
-    public TenderModel getTender() {
-        return tender;
+    public LotModel getLot() {
+        return lot;
     }
 
-    public void setTender(TenderModel tender) {
-        this.tender = tender;
+    public void setLot(LotModel lot) {
+        this.lot = lot;
     }
 
     public String getNameOfCompany() {
@@ -124,11 +124,11 @@ public class Bid {
         this.gstNumber = gstNumber;
     }
 
-    public String getBidAmount() {
-        return bidAmount;
+    public String getProductAmount() {
+        return productAmount;
     }
 
-    public void setBidAmount(String bidAmount) {
-        this.bidAmount = bidAmount;
+    public void setProductAmount(String productAmount) {
+        this.productAmount = productAmount;
     }
 }

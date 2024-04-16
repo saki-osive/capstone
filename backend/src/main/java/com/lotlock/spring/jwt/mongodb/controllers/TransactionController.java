@@ -1,11 +1,9 @@
 package com.lotlock.spring.jwt.mongodb.controllers;
 
 
-import com.lotlock.spring.jwt.mongodb.models.TenderModel;
 import com.lotlock.spring.jwt.mongodb.models.TransactionAudit;
 import com.lotlock.spring.jwt.mongodb.network.response.BaseResponse;
 import com.lotlock.spring.jwt.mongodb.repository.TransactionAuditRepository;
-import com.fasterxml.jackson.databind.ser.Serializers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,6 @@
 package com.lotlock.spring.jwt.mongodb.controllers;
 
 import com.lotlock.spring.jwt.mongodb.cloudVision.CloudVisionService;
-import com.lotlock.spring.jwt.mongodb.models.TenderModel;
 import com.lotlock.spring.jwt.mongodb.network.response.BaseResponse;
 import com.lotlock.spring.jwt.mongodb.payload.request.DownloadRequest;
 import com.lotlock.spring.jwt.mongodb.services.TransactionService;
@@ -14,18 +13,13 @@ import com.jlefebure.spring.boot.minio.MinioService;
 import io.minio.MinioClient;
 import io.minio.http.Method;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.InputStreamResource;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Path;
-import java.util.List;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController

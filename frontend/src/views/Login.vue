@@ -28,11 +28,11 @@
                 </v-form>
               </v-card-text>
               <v-card-actions class="justify-center">
-                <v-btn color="#87CEEB" class="mx-2" style="width: 63%;" @click="loginClicked()">Login</v-btn>
-                <v-btn color="secondary" class="mx-2" style="width: 35%;" to="/dashboard">Fake-Demo Login</v-btn>
+                <v-btn color="#87CEEB" class="mx-2" style="width: 200px;" @click="loginClicked()">Login</v-btn>
+                <v-btn color="secondary" class="mx-2" style="width: 250px;" to="/dashboard">Fake-Demo Login</v-btn>
               </v-card-actions>
               <v-card-actions class="justify-center">
-                <v-btn color="#87CEEB" :to="{name: 'Register'}" block>New to LotLock? Register Here</v-btn>
+                <v-btn color="#87CEEB" :to="{name: 'Register'}" style="width: 300px;">New to LotLock? Register Here</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>

@@ -1,6 +1,5 @@
 package com.lotlock.spring.jwt.mongodb.repository;
 
-import com.lotlock.spring.jwt.mongodb.models.TenderModel;
 import com.lotlock.spring.jwt.mongodb.models.TransactionAudit;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

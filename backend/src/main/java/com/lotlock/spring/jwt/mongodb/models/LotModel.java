@@ -9,41 +9,41 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
-@Document(collection = "tender")
-public class TenderModel {
+@Document(collection = "lot")
+public class LotModel {
 
     @Id
     private String id;
 
     @DBRef
-    private User tenderCreator;
+    private User lotCreator;
 
     private String name;
     private String scopeOfWork;
     private String referenceNumber;
     private String referenceDate;
-    private String typeOfBiddingSystem;
+    private String typeOfProductSystem;
     private String type;
     private String formOfContract;
     private String numberOfCover;
     private String category;
     private String accountTypeHead;
-    private String numberOfBidOpeners;
-    private String allowReBidSubmission;
-    private String allowWithdrawalOfBids;
-    private String bidSecurityEnabled;
+    private String numberOfProductOpeners;
+    private String allowReProductSubmission;
+    private String allowWithdrawalOfProducts;
+    private String productSecurityEnabled;
     private String allowOfflineSubmission;
     private String allowTechnicalEvaluation;
     private String venue;
     private String preBitMeetingDate;
-    private String dueDateForBidSubmission;
-    private String unPricedBidOpeningDate;
+    private String dueDateForProductSubmission;
+    private String unPricedProductOpeningDate;
     private String contactName;
     private String email;
     private String phoneNumber;
     private String shouldAllowMultiCurrency;
     private String paymentMode;
-    private String tenderFileDocumentPath;
+    private String lotFileDocumentPath;
     private String sorFilePath;
     private Boolean approved;
     private Boolean draft;
@@ -80,12 +80,12 @@ public class TenderModel {
         this.name = name;
     }
 
-    public User getTenderCreator() {
-        return tenderCreator;
+    public User getLotCreator() {
+        return lotCreator;
     }
 
-    public void setTenderCreator(User tenderCreator) {
-        this.tenderCreator = tenderCreator;
+    public void setLotCreator(User lotCreator) {
+        this.lotCreator = lotCreator;
     }
 
     public String getInvitingOfficer() {
@@ -136,12 +136,12 @@ public class TenderModel {
         this.referenceDate = referenceDate;
     }
 
-    public String getTypeOfBiddingSystem() {
-        return typeOfBiddingSystem;
+    public String getTypeOfProductSystem() {
+        return typeOfProductSystem;
     }
 
-    public void setTypeOfBiddingSystem(String typeOfBiddingSystem) {
-        this.typeOfBiddingSystem = typeOfBiddingSystem;
+    public void setTypeOfProductSystem(String typeOfProductSystem) {
+        this.typeOfProductSystem = typeOfProductSystem;
     }
 
     public String getType() {
@@ -184,36 +184,36 @@ public class TenderModel {
         this.accountTypeHead = accountTypeHead;
     }
 
-    public String getNumberOfBidOpeners() {
-        return numberOfBidOpeners;
+    public String getNumberOfProductOpeners() {
+        return numberOfProductOpeners;
     }
 
-    public void setNumberOfBidOpeners(String numberOfBidOpeners) {
-        this.numberOfBidOpeners = numberOfBidOpeners;
+    public void setNumberOfProductOpeners(String numberOfProductOpeners) {
+        this.numberOfProductOpeners = numberOfProductOpeners;
     }
 
-    public String getAllowReBidSubmission() {
-        return allowReBidSubmission;
+    public String getAllowReProductSubmission() {
+        return allowReProductSubmission;
     }
 
-    public void setAllowReBidSubmission(String allowReBidSubmission) {
-        this.allowReBidSubmission = allowReBidSubmission;
+    public void setAllowReProductSubmission(String allowReProductSubmission) {
+        this.allowReProductSubmission = allowReProductSubmission;
     }
 
-    public String getAllowWithdrawalOfBids() {
-        return allowWithdrawalOfBids;
+    public String getAllowWithdrawalOfProducts() {
+        return allowWithdrawalOfProducts;
     }
 
-    public void setAllowWithdrawalOfBids(String allowWithdrawalOfBids) {
-        this.allowWithdrawalOfBids = allowWithdrawalOfBids;
+    public void setAllowWithdrawalOfProducts(String allowWithdrawalOfProducts) {
+        this.allowWithdrawalOfProducts = allowWithdrawalOfProducts;
     }
 
-    public String getBidSecurityEnabled() {
-        return bidSecurityEnabled;
+    public String getProductSecurityEnabled() {
+        return productSecurityEnabled;
     }
 
-    public void setBidSecurityEnabled(String bidSecurityEnabled) {
-        this.bidSecurityEnabled = bidSecurityEnabled;
+    public void setProductSecurityEnabled(String productSecurityEnabled) {
+        this.productSecurityEnabled = productSecurityEnabled;
     }
 
     public String getAllowOfflineSubmission() {
@@ -248,20 +248,20 @@ public class TenderModel {
         this.preBitMeetingDate = preBitMeetingDate;
     }
 
-    public String getDueDateForBidSubmission() {
-        return dueDateForBidSubmission;
+    public String getDueDateForProductSubmission() {
+        return dueDateForProductSubmission;
     }
 
-    public void setDueDateForBidSubmission(String dueDateForBidSubmission) {
-        this.dueDateForBidSubmission = dueDateForBidSubmission;
+    public void setDueDateForProductSubmission(String dueDateForProductSubmission) {
+        this.dueDateForProductSubmission = dueDateForProductSubmission;
     }
 
-    public String getUnPricedBidOpeningDate() {
-        return unPricedBidOpeningDate;
+    public String getUnPricedProductOpeningDate() {
+        return unPricedProductOpeningDate;
     }
 
-    public void setUnPricedBidOpeningDate(String unPricedBidOpeningDate) {
-        this.unPricedBidOpeningDate = unPricedBidOpeningDate;
+    public void setUnPricedProductOpeningDate(String unPricedProductOpeningDate) {
+        this.unPricedProductOpeningDate = unPricedProductOpeningDate;
     }
 
     public String getContactName() {
@@ -304,12 +304,12 @@ public class TenderModel {
         this.paymentMode = paymentMode;
     }
 
-    public String getTenderFileDocumentPath() {
-        return tenderFileDocumentPath;
+    public String getLotFileDocumentPath() {
+        return lotFileDocumentPath;
     }
 
-    public void setTenderFileDocumentPath(String tenderFileDocumentPath) {
-        this.tenderFileDocumentPath = tenderFileDocumentPath;
+    public void setLotFileDocumentPath(String lotFileDocumentPath) {
+        this.lotFileDocumentPath = lotFileDocumentPath;
     }
 
     public String getSorFilePath() {

@@ -28,7 +28,7 @@ public class CloudVisionController {
         ResponseEntity result = null;
 
         try {
-            String filePath = "/Users/singh/Desktop/test2.png";
+            String filePath = "/Users/arcturus/Desktop/test2.png";
             BatchAnnotateImagesResponse response = cloudVisionService.detectText(filePath);
             result = ResponseEntity.ok(com.google.protobuf.util.JsonFormat.printer().print(response));
         } catch (IOException e) {

@@ -5,8 +5,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 
-@Document(collection = "bid_item")
-public class BidItem {
+@Document(collection = "product_item")
+public class ProductItem {
 
     @Id
     private String id;

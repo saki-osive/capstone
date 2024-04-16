@@ -17,8 +17,8 @@ public class SignupRequest {
     private String password;
 
     private String companyName;
-    private String gailVendorCode;
-    private String gailTenderRef;
+    private String orgVendorCode;
+    private String orgLotRef;
     private String language;
     private String telephone;
     private String mobile;
@@ -39,20 +39,20 @@ public class SignupRequest {
         this.companyName = companyName;
     }
 
-    public String getGailVendorCode() {
-        return gailVendorCode;
+    public String getOrgVendorCode() {
+        return orgVendorCode;
     }
 
-    public void setGailVendorCode(String gailVendorCode) {
-        this.gailVendorCode = gailVendorCode;
+    public void setOrgVendorCode(String orgVendorCode) {
+        this.orgVendorCode = orgVendorCode;
     }
 
-    public String getGailTenderRef() {
-        return gailTenderRef;
+    public String getOrgLotRef() {
+        return orgLotRef;
     }
 
-    public void setGailTenderRef(String gailTenderRef) {
-        this.gailTenderRef = gailTenderRef;
+    public void setOrgLotRef(String orgLotRef) {
+        this.orgLotRef = orgLotRef;
     }
 
     public String getLanguage() {

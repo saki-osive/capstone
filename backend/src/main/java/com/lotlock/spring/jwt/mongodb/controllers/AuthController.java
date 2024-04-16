@@ -109,8 +109,8 @@ public class AuthController {
 							 signUpRequest.getEmail());
 
 		user.setCompanyName(signUpRequest.getCompanyName());
-		user.setGailVendorCode(signUpRequest.getGailVendorCode());
-		user.setGailTenderRef(signUpRequest.getGailTenderRef());
+		user.setOrgVendorCode(signUpRequest.getOrgVendorCode());
+		user.setOrgLotRef(signUpRequest.getOrgLotRef());
 		user.setLanguage(signUpRequest.getLanguage());
 		user.setTelephone(signUpRequest.getTelephone());
 		user.setMobile(signUpRequest.getMobile());

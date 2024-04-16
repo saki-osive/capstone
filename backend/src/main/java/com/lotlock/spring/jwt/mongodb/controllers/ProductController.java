@@ -1,13 +1,11 @@
 package com.lotlock.spring.jwt.mongodb.controllers;
 
 import com.lotlock.spring.jwt.mongodb.events.Events;
-import com.lotlock.spring.jwt.mongodb.models.Bid;
-import com.lotlock.spring.jwt.mongodb.models.BidItem;
-import com.lotlock.spring.jwt.mongodb.models.TenderModel;
+import com.lotlock.spring.jwt.mongodb.models.Product;
+import com.lotlock.spring.jwt.mongodb.models.ProductItem;
 import com.lotlock.spring.jwt.mongodb.network.response.BaseResponse;
-import com.lotlock.spring.jwt.mongodb.repository.BidItemRepository;
-import com.lotlock.spring.jwt.mongodb.repository.BidRepository;
-import com.lotlock.spring.jwt.mongodb.repository.TenderRepository;
+import com.lotlock.spring.jwt.mongodb.repository.ProductItemRepository;
+import com.lotlock.spring.jwt.mongodb.repository.ProductRepository;
 import com.lotlock.spring.jwt.mongodb.services.TransactionService;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,8 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.Valid;
-
 import java.nio.file.Path;
 import java.util.List;
 
@@ -27,17 +23,17 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/bid")
-public class BidController {
+@RequestMapping("/api/product")
+public class ProductController {
 
     @Autowired
-    BidRepository bidRepository;
+    ProductRepository productRepository;
 
     @Autowired
     TransactionService transactionService;
 
     @Autowired
-    BidItemRepository bidItemRepository;
+    ProductItemRepository productItemRepository;
 
     @Autowired
     private MinioService minioService;
@@ -45,19 +41,19 @@ public class BidController {
     private final String folderPath = "";
 
     @GetMapping("/all")
-    public ResponseEntity<?> getAllDraftTenders() {
+    public ResponseEntity<?> getAllDraftLots() {
         ResponseEntity<?> result = null;
 
-        List<Bid> allBids = bidRepository.findAll();
-        result = new ResponseEntity<>(allBids, HttpStatus.CREATED);
+        List<Product> allProducts = productRepository.findAll();
+        result = new ResponseEntity<>(allProducts, HttpStatus.CREATED);
 
         return result;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST,consumes = MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<?> createBid(@RequestParam(value = "technicalDoc",required = false) MultipartFile technicalDoc,
-                                       @RequestParam(value = "financialDoc", required = false) MultipartFile financialDoc,
-                                       @RequestParam("bid") String bidModelString) {
+    public ResponseEntity<?> createProduct(@RequestParam(value = "technicalDoc",required = false) MultipartFile technicalDoc,
+                                           @RequestParam(value = "financialDoc", required = false) MultipartFile financialDoc,
+                                           @RequestParam("product") String productModelString) {
 
         ResponseEntity<?> result = null;
 
@@ -66,30 +62,30 @@ public class BidController {
 
         try {
 
-            Bid bidModel = objectMapper.readValue(bidModelString, Bid.class);
-            List<BidItem> bidItems = bidModel.getBidItems();
-            for (BidItem item:bidItems){
-                item = bidItemRepository.save(item);
+            Product productModel = objectMapper.readValue(productModelString, Product.class);
+            List<ProductItem> productItems = productModel.getProductItems();
+            for (ProductItem item:productItems){
+                item = productItemRepository.save(item);
             }
 
             //upload financial and tech docs to minio
             if (technicalDoc != null){
                 Path technicalDocumentPath = Path.of(folderPath+technicalDoc.getOriginalFilename());
                 minioService.upload(technicalDocumentPath, technicalDoc.getInputStream(), technicalDoc.getContentType());
-                bidModel.setTechnicalDocumentPath(folderPath+technicalDocumentPath.toString());
+                productModel.setTechnicalDocumentPath(folderPath+technicalDocumentPath.toString());
             }
 
             if (financialDoc != null){
                 Path financialDocPath = Path.of(folderPath+financialDoc.getOriginalFilename());
                 minioService.upload(financialDocPath, financialDoc.getInputStream(), financialDoc.getContentType());
-                bidModel.setFinancialDocumentPath(folderPath+financialDocPath.toString());
+                productModel.setFinancialDocumentPath(folderPath+financialDocPath.toString());
             }
 
-            //save bid
-            Bid _bid = bidRepository.save(bidModel);
+            //save product
+            Product _product = productRepository.save(productModel);
 
-            transactionService.log("", Events.BID_CREATED,"",_bid);
-            result = ResponseEntity.ok(new BaseResponse("Bid created successfully.",true,_bid));
+            transactionService.log("", Events.PRODUCT_CREATED,"",_product);
+            result = ResponseEntity.ok(new BaseResponse("Product created successfully.",true,_product));
 
         }catch (Exception e){
             e.printStackTrace();

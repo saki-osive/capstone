@@ -102,16 +102,6 @@ export default {
                   icon: 'fa-id-card',
                   route: { name: 'AuditorIndex' },
                 },
-                // {
-                //     title: 'Freight Forwarder',
-                //     icon: 'fa-id-card',
-                //     route: { name: 'FreightIndex' },
-                // },
-                // {
-                //     title: 'Shipper',
-                //     icon: 'fa-id-card',
-                //     route: { name: 'ShipperIndex' },
-                // },
             ],
         }
     },
