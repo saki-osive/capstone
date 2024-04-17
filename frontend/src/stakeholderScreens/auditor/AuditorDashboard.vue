@@ -9,7 +9,7 @@
             style="height: 100px;"
         >
           <v-card class="ma-3 pa-6" outlined tile
-          >14 new submitted bids</v-card
+          >14 new submitted products</v-card
           >
           <v-card class="ma-3 pa-6" outlined tile
           >25 Active Lots</v-card
@@ -88,7 +88,7 @@
 
           <v-card-text class="pt-0">
             <div class="title font-weight-light mb-2">Total Products</div>
-            <div class="subheading font-weight-light grey--text">Total bids submitted in june and july </div>
+            <div class="subheading font-weight-light grey--text">Total products submitted in june and july </div>
             <v-divider class="my-2"></v-divider>
             <v-icon
                 class="mr-2"

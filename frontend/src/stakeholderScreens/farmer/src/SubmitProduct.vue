@@ -70,7 +70,7 @@
                         </v-row>
                         <v-row>
                             <v-col cols="5" align="right">Product Amount:</v-col>
-                            <v-col cols="3" align="left">{{ this.input.bidAmount }}</v-col>
+                            <v-col cols="3" align="left">{{ this.input.productAmount }}</v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="5" align="right">GST Number:</v-col>
@@ -162,7 +162,7 @@ export default {
 
             var request = JSON.parse(JSON.stringify(this.input));
             request["lot"] = this.lotModel;
-            request["bidItems"] = this.$refs.billOfMaterial.covers;
+            request["productItems"] = this.$refs.billOfMaterial.covers;
 
             let formData = new FormData();
             formData.append("product",JSON.stringify(request));
@@ -204,7 +204,7 @@ export default {
             input:{
                 financialDoc:"",
                 technicalDoc:"",
-                bidAmount:""
+                productAmount:""
             },
             documents:[],
             lotModel:{},

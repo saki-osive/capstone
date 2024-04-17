@@ -55,12 +55,12 @@
                                     <v-col cols="3" align="left">{{ this.lot.allowReProductSubmission }}</v-col>
                                 </v-row>
                                 <v-row>
-                                    <v-col cols="5" align="right">Should allow Withdrawal of bids:</v-col>
+                                    <v-col cols="5" align="right">Should allow Withdrawal of products:</v-col>
                                     <v-col cols="3" align="left">{{ this.lot.allowWithdrawalOfProducts }}</v-col>
                                 </v-row>
                                 <v-row>
                                     <v-col cols="5" align="right">Product Security :</v-col>
-                                    <v-col cols="3" align="left">{{ this.lot.bidSecurityEnabled }}</v-col>
+                                    <v-col cols="3" align="left">{{ this.lot.productSecurityEnabled }}</v-col>
                                 </v-row>
                                 <v-row>
                                     <v-col cols="5" align="right">Should Allow Offline Submission :</v-col>

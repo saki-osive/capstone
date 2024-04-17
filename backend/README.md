@@ -15,7 +15,7 @@ Run below command to setup database
 db.roles.insertMany([
    { name: "ROLE_FARMER" },
    { name: "ROLE_PROCESSOR" },
-   { name: "ROLE_TENDER_CREATOR" },
+   { name: "ROLE_DISTRIBUTOR" },
    { name: "ROLE_RETAILER" },
    { name: "ROLE_ADMIN" },
    { name: "ROLE_ONBOARDING" },

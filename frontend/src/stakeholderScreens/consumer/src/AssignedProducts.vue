@@ -39,7 +39,7 @@ export default {
         return {
             covers: [
                 {
-                    bidId: '78657579',
+                    productId: '78657579',
                     lotId: '8976786756',
                     lotName:
                         ' HIRING OF PROJECT MANAGEMENT CONSULTANCY SERVICES',
@@ -49,7 +49,7 @@ export default {
             headers: [
                 {
                     text: 'Product ID',
-                    value: 'bidId',
+                    value: 'productId',
                 },
                 {
                     text: 'Lot Id',

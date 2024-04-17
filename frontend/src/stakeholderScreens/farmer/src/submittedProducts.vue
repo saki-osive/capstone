@@ -102,7 +102,7 @@ export default {
                 loader.hide();
                 if (response.data.length > 0){
                     this.submittedLotsList = response.data;
-                    this.showNotification("Success","Fetched all bids.")
+                    this.showNotification("Success","Fetched all products.")
                 }else {
                     this.showNotification("Note","No products available.","info")
                 }

@@ -31,13 +31,13 @@
       <v-row>
         <v-col cols="3">
           <v-subheader>
-            BID Amount
+            Product Amount
             <span class="red--text">*</span>
           </v-subheader>
         </v-col>
         <v-col>
           <v-text-field
-                  v-model="input.bidAmount"
+                  v-model="input.productAmount"
                   outline
           ></v-text-field>
         </v-col>

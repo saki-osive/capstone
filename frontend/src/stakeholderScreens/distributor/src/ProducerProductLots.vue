@@ -33,7 +33,7 @@ name: "ProducerProductLots",
       headers: [
         {
           text: 'HS Code',
-          value: 'bidId',
+          value: 'productId',
         },
         {
           text: 'Freight Order',
@@ -54,7 +54,7 @@ name: "ProducerProductLots",
       ],
       covers: [
         {
-          bidId: 8541256326,
+          productId: 8541256326,
           lotName: 'Assorted Valves SAPL Project',
           documents: '',
           submissionDate: '18.02.2020',

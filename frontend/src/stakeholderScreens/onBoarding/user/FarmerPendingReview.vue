@@ -54,8 +54,8 @@ export default {
                     value: 'email',
                 },
                 {
-                    text: 'TENDER REF',
-                    value: 'gailIndiaLotRef',
+                    text: 'LOT REF',
+                    value: 'orgLotRef',
                 },
                 {
                     text: 'Review',
@@ -66,8 +66,8 @@ export default {
                 {
                     userID: 'HGD78678DB',
                     companyName: 'Demo Company',
-                    email: 'demo@gail.in',
-                    gailIndiaLotRef: '8765678679',
+                    email: 'demo@org.in',
+                    orgLotRef: '8765678679',
                 },
             ],
         }

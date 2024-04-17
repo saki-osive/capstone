@@ -109,7 +109,7 @@ export default {
                                 this.$router.push({ path: '/consumer' });
                                 break;
                             case RoleConstants.ROLE_GOVERNMENT:
-                                this.$router.push({ path: '/bidEvalChairman' });
+                                this.$router.push({ path: '/government' });
                                 break;
                             case RoleConstants.ROLE_CVO:
                                 this.$router.push({ path: '/cvo' });

@@ -10,11 +10,11 @@
         </v-row>
         <v-row>
             <v-col cols="6">Vendor Code:</v-col>
-            <v-col cols="3">{{ gailVendorCode }}</v-col>
+            <v-col cols="3">{{ orgVendorCode }}</v-col>
         </v-row>
         <v-row>
-            <v-col cols="6">TENDER REF:</v-col>
-            <v-col cols="3">{{ gailIndiaLotRef }}</v-col>
+            <v-col cols="6">LOT REF:</v-col>
+            <v-col cols="3">{{ orgLotRef }}</v-col>
         </v-row>
         <p>
             <Strong>Address Data</Strong>

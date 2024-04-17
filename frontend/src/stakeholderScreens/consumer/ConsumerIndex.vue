@@ -1,7 +1,7 @@
 <template>
     <div>
         <AppBar @toMiniVariant="changeMiniVariant" />
-        <SideBar :navItems="bideEvalExpertNavItems" :miniVariant="miniVariant" />
+        <SideBar :navItems="consumerNavItems" :miniVariant="miniVariant" />
         <v-main app>
             <v-container>
                 <router-view></router-view>
@@ -32,7 +32,7 @@ export default {
     data() {
         return {
             miniVariant: false,
-            bideEvalExpertNavItems: [
+            consumerNavItems: [
                 {
                     title: 'Dashboard',
                     icon: 'fa-home',

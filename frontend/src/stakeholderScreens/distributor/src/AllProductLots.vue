@@ -31,7 +31,7 @@ name: "AllProductLots",
       headers: [
         {
           text: 'Order Id',
-          value: 'bidId',
+          value: 'productId',
         },
         {
           text: 'Customs',
@@ -52,7 +52,7 @@ name: "AllProductLots",
       ],
       covers: [
         {
-          bidId: 8541256326,
+          productId: 8541256326,
           lotName: 'Assorted Valves SAPL Project',
           transType: 'Pending for clearance',
           submissionDate: '18.02.2020',
