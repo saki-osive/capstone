@@ -1,0 +1,76 @@
+/*
+ * Copyright IBM Corp. 2018 All Rights Reserved.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url "https://www.jitpack.io" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.bmuschko:gradle-docker-plugin:5.1.0'
+    }
+}
+
+apply plugin: 'com.bmuschko.docker-remote-api'
+
+import com.bmuschko.gradle.docker.tasks.image.*
+
+task copyLib (type: Copy) {
+    dependsOn ':fabric-chaincode-shim:build'
+    from project(':fabric-chaincode-shim').configurations.runtime
+    into('build/distributions/chaincode-java/lib')
+}
+
+task copyShimJar(type: Copy) {
+    dependsOn copyLib
+    from project(':fabric-chaincode-shim').jar
+    into('build/distributions/chaincode-java/lib')
+}
+
+task copyStartScript(type: Copy) {
+    dependsOn copyShimJar
+    from ('start')
+    into ('build/distributions/chaincode-java')
+}
+
+task copyBuildScript(type: Copy) {
+    dependsOn copyStartScript
+    from ('build.sh')
+    into ('build/distributions/chaincode-java')
+}
+
+task copyAllDeps(type: Copy) {
+    dependsOn copyBuildScript
+    copy {
+        from project(':fabric-chaincode-shim').getProjectDir()
+        into('build/distributions/chaincode-java/shim-src/fabric-chaincode-shim/')
+    }
+
+    copy {
+        from project(':fabric-chaincode-protos').getProjectDir()
+        into('build/distributions/chaincode-java/shim-src/fabric-chaincode-protos/')
+    }
+
+    copy {
+        from project.getParent().file("build.gradle")
+        into('build/distributions/chaincode-java/shim-src/')
+    }
+
+    copy {
+        from project.getParent().file("settings.gradle")
+        into('build/distributions/chaincode-java/shim-src/')
+    }
+}
+
+task buildImage(type: DockerBuildImage) {
+    dependsOn copyAllDeps
+    inputDir = project.file('Dockerfile').parentFile
+    tags = ['hyperledger/fabric-javaenv', 'hyperledger/fabric-javaenv:amd64-3.0.0', 'hyperledger/fabric-javaenv:amd64-latest']
+}
+

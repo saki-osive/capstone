@@ -1,0 +1,12 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/jammy64"
+  
+  # Use a bridged network adapter
+  config.vm.network "public_network", bridge: "your_physical_network_interface"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "32768"
+    vb.cpus = 16
+  end
+end
+

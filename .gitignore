@@ -1,1 +1,9 @@
 .idea
+
+#Backend build directory
+backend/target
+
+#Binary executable for the Minio Client
+mc
+mc.*
+
