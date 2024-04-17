@@ -1,15 +1,15 @@
 <template>
     <v-container app>
-        <v-app-bar>
+        <v-app-bar color="#36454f" dark flat>
             <img src="../assets/img/logo.png" alt />
             <v-toolbar-title>
                 <h1> LotLock</h1>
             </v-toolbar-title>
         </v-app-bar>
         <v-card absolute flat color="#FFFFFF">
-            <div>
-                <h2 align="center">Welcome to LotLock Supply Chain Portal</h2>
-            </div>
+          <div style="margin: 20px 0;">
+            <h2 align="center" style="color: #1976D2;">Welcome to LotLock Supply Chain Portal</h2>
+          </div>
         </v-card>
         <div>
             <p align="center" class="font-weight-black">
@@ -18,9 +18,9 @@
             <p align="center">*Required</p>
             <p align="center" class="font-weight-black">Company Details</p>
         </div>
-        <v-card width="70%" class="mx-auto mt-12" align="center">
+        <v-card style="padding-left: 20px; padding-right: 40px; padding-top: 20px" width="60%" class="mx-auto mt-12" align="center">
             <v-form>
-                <h2>Add New User</h2>
+                <h2 style="color: #1976D2;">Add New User</h2>
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
@@ -137,7 +137,7 @@
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            GST No
+                            GST/HST/QST No
                             <span class="red--text">*</span>
                         </v-subheader>
                     </v-col>
@@ -154,7 +154,7 @@
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            PAN Number
+                          SIN Number
                             <span class="red--text">*</span>
                         </v-subheader>
                     </v-col>

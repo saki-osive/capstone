@@ -53,9 +53,9 @@ export default {
     data() {
         return {
             modeOfTransport: [
-                'Air',
-                'Water (Ships)',
-                'Land Transport(including Railways or By Road Trucks ',
+              'Air Freight',
+              'Water Transport (Ships)',
+              'Land Transport (including Railways or By Road Trucks)',
             ],
             snackbar: false,
         }

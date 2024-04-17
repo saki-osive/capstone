@@ -60,7 +60,7 @@
                         <v-text-field outlined></v-text-field>
                     </v-col>
                     <v-col cols="3">
-                        <v-subheader>Lot Ref</v-subheader>
+                        <v-subheader>Lot Reference</v-subheader>
                     </v-col>
                     <v-col>
                         <v-text-field outlined></v-text-field>
@@ -109,14 +109,14 @@
                 <v-row>
                     <v-col align="left">
                         <v-subheader>
-                            Product Delivery Address
+                            Product Level Details
                         </v-subheader>
                     </v-col>
                 </v-row>
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            E-Mail Address
+                          Product Name
                             <span class="red--text">*</span>
                         </v-subheader>
                     </v-col>
@@ -127,7 +127,7 @@
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            Telephone
+                          Product ID
                             <span class="red--text">*</span>
                         </v-subheader>
                     </v-col>
@@ -138,7 +138,7 @@
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            Mobile No
+                          Storage Conditions
                             <span class="red--text">*</span>
                         </v-subheader>
                     </v-col>
@@ -149,7 +149,7 @@
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            Street
+                          Harvest Date
                             <span class="red--text">*</span>
                         </v-subheader>
                     </v-col>
@@ -158,7 +158,7 @@
                     </v-col>
                     <v-col cols="3">
                         <v-subheader>
-                            House Number
+                          Origin
                         </v-subheader>
                     </v-col>
                     <v-col>
@@ -168,7 +168,7 @@
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            Building
+                          Manufacturing Date
                         </v-subheader>
                     </v-col>
                     <v-col>
@@ -178,7 +178,7 @@
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            Floor
+                          Expiration Date
                         </v-subheader>
                     </v-col>
                     <v-col>
@@ -208,7 +208,7 @@
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            State
+                          Certifications
                         </v-subheader>
                     </v-col>
                     <v-col>
@@ -218,7 +218,7 @@
                 <v-row>
                     <v-col cols="3">
                         <v-subheader>
-                            GST No
+                          GST/HST/QST No
                             <span class="red--text">*</span>
                         </v-subheader>
                     </v-col>
@@ -245,7 +245,7 @@ export default {
 
     data() {
         return {
-            languageItems: ['English', 'Hindi'],
+            languageItems: ['English', 'French'],
             payment: ['Online', 'Offline',]
         }
     },

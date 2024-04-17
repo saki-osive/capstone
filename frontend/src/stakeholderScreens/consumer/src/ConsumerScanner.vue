@@ -58,43 +58,46 @@
           </v-toolbar>
 
           <v-stepper v-model="e13" vertical>
-            <v-stepper-step step="1" complete>Freight Request Created</v-stepper-step>
+            <v-stepper-step step="1" complete>Organic Rice Cultivated</v-stepper-step>
+            <v-stepper-content step="1">Cultivated on April 1, 2024</v-stepper-content>
 
-            <v-stepper-content step="1"> 07 Jul  07:33</v-stepper-content>
+            <v-stepper-step step="1" complete>Transportation Initiated</v-stepper-step>
+            <v-stepper-content step="1">Transported on April 4, 2024</v-stepper-content>
 
-            <v-stepper-step step="2" complete
-            >Freight Approved</v-stepper-step
-            >
-            <v-stepper-content step="2">  07 Jul  07:34</v-stepper-content>
+            <v-stepper-step step="1" complete>Processing Completed</v-stepper-step>
+            <v-stepper-content step="1">Processed on April 8, 2024</v-stepper-content>
 
-            <v-stepper-step step="3" complete >Agent Assigned</v-stepper-step>
+            <v-stepper-step step="1" complete>Pick-up Confirmed</v-stepper-step>
+            <v-stepper-content step="1">Confirmed on April 10, 2024</v-stepper-content>
 
-            <v-stepper-content step="3">
-              07 Jul  07:40
-            </v-stepper-content>
+            <v-stepper-step step="1" complete>Delivery Confirmed</v-stepper-step>
+            <v-stepper-content step="1">Confirmed on April 15, 2024</v-stepper-content>
 
-            <v-stepper-step step="4">Pick-up Confirmed</v-stepper-step>
-            <v-stepper-content step="4">
+            <v-stepper-step step="1" complete>Quality Assurance</v-stepper-step>
+            <v-stepper-content step="1">Quality checked on April 15, 2024</v-stepper-content>
 
-            </v-stepper-content>
+            <v-stepper-step step="1" complete>Equipment Utilization</v-stepper-step>
+            <v-stepper-content step="1">Best equipment used throughout</v-stepper-content>
 
+            <v-stepper-step step="1" complete>Inventory Management</v-stepper-step>
+            <v-stepper-content step="1">Inventory managed efficiently</v-stepper-content>
 
+            <v-stepper-step step="1" complete>System Administration</v-stepper-step>
+            <v-stepper-content step="1">Systems maintained for operations</v-stepper-content>
 
-            <v-stepper-step step="5">Delivery Confirmed</v-stepper-step>
-            <v-stepper-content step="5">
+            <v-stepper-step step="1" complete>Data Analysis</v-stepper-step>
+            <v-stepper-content step="1">Data analyzed for service improvement</v-stepper-content>
 
-            </v-stepper-content>
+            <v-stepper-step step="11" complete>Sustainability Practices</v-stepper-step>
+            <v-stepper-content step="1">Committed to sustainability</v-stepper-content>
 
-            <v-stepper-step step="6">POD upload</v-stepper-step>
-            <v-stepper-content step="6">
-
-            </v-stepper-content>
-
-            <v-stepper-step step="6">POD approved</v-stepper-step>
-
+            <v-stepper-step step=""  color="grey">Product Sold At </v-stepper-step>
+            <v-stepper-content step="12">Received by you on April 22, 2024</v-stepper-content>
           </v-stepper>
 
-<!--          <div class="text-center">-->
+
+
+          <!--          <div class="text-center">-->
 <!--            <v-btn-->
 <!--                class="red"-->
 <!--                dark-->
@@ -124,13 +127,13 @@ export default {
     return {
       showTrackProduct: false,
       decodedText: '',
-      ProductID: 'P123456',
-      FarmLocation: 'Haryana, India',
-      HarvestDate: '2024-04-08',
+      ProductID: 'PROD12345',
+      FarmLocation: 'Rice Farms Co., Riceville, USA',
+      HarvestDate: '2024-04-10',
       TransportDetails: 'Transported by XYZ Logistics',
       StoreArrivalDate: '2024-04-15',
-      ShelfLife: '2 weeks',
-      Barcode: '789101112',
+      ShelfLife: '1 year',
+      Barcode: 'DLV123456',
       BlockchainURL: 'https://blockchainrecords.com/record/P123456',
       states: ["Haryana", "Delhi", "Punjab", "Telangana"],
       cities: ["Panipat", "Chandigarh", "Hissar", "Jaipur", "Surat"],
@@ -147,12 +150,19 @@ export default {
   methods: {
     onDecode(result) {
       this.decodedText = '{\n' +
-          '  "blockchain": "Bitcoin",\n' +
+          '  "blockchain": "Hyperledger Fabric",\n' +
           '  "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",\n' +
           '  "transaction_id": "f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16",\n' +
           '  "amount": 0.1,\n' +
-          '  "timestamp": "2024-04-08T18:11:20+05:30"\n' +
-          '}\n'
+          '  "timestamp": "2024-04-08T18:11:20+05:30",\n' +
+          '  "ProductID": "PROD12345",\n' +
+          '  "ProductName": "Organic Rice",\n' +
+          '  "Origin": "Rice Farms Co.",\n' +
+          '  "HarvestDate": "2024-04-10",\n' +
+          '  "TransportDetails": "Transported by TRNSP789",\n' +
+          '  "DeliveryID": "DLV123456",\n' +
+          '  "LotReference": "LOT2024001"\n' +
+          '}\n';
       console.error(result);
       //this.decodedText = result;
     },

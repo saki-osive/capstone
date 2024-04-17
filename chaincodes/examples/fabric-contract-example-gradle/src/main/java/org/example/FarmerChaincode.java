@@ -9,12 +9,12 @@ import org.hyperledger.fabric.contract.annotation.Property;
 import org.json.JSONObject;
 
 @DataType()
-public class BidderChaincode {
+public class FarmerChaincode {
 
     @Property()
     private String value;
 
-    public BidderChaincode(){
+    public FarmerChaincode(){
     }
 
     public String getValue() {

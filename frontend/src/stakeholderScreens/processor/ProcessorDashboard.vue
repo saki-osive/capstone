@@ -4,8 +4,8 @@
             <v-col cols="12">
                 <v-row align="start" justify="center" class="grey lighten-5" style="height: 100px;">
                     <v-card class="ma-3 pa-6" outlined tile>120 Pending reviews</v-card>
-                    <v-card class="ma-3 pa-6" outlined tile>25 new bidders added</v-card>
-                    <v-card class="ma-3 pa-6" outlined tile>7 bidders suspended</v-card>
+                    <v-card class="ma-3 pa-6" outlined tile>25 new farmers lots</v-card>
+                    <v-card class="ma-3 pa-6" outlined tile>7 farmer suspended</v-card>
                 </v-row>
             </v-col>
         </v-row>
@@ -29,7 +29,7 @@
                         <div class="title font-weight-light mb-2">Active Farmers</div>
                         <div
                             class="subheading font-weight-light grey--text"
-                        >Active Farmers in month of July</div>
+                        >Active Farmers in month of March</div>
                         <v-divider class="my-2"></v-divider>
                         <v-icon class="mr-2" small>mdi-clock</v-icon>
                         <span
@@ -60,7 +60,7 @@
                         <div class="title font-weight-light mb-2">Total Farmers</div>
                         <div
                             class="subheading font-weight-light grey--text"
-                        >Total bidders registered in june and july</div>
+                        >Total farmers lots received in feb and march</div>
                         <v-divider class="my-2"></v-divider>
                         <v-icon class="mr-2" small>mdi-clock</v-icon>
                         <span
@@ -79,7 +79,7 @@
                         :width="25"
                         :value="80"
                         color="teal"
-                    >Farmers Approved</v-progress-circular>
+                    >Farmers Lots<br> Approved</v-progress-circular>
                 </v-card>
             </v-col>
 
@@ -90,7 +90,7 @@
                     :width="25"
                     value="3"
                     color="red"
-                >Farmers Suspended</v-progress-circular>
+                >Farmers Lots<br> Suspended</v-progress-circular>
             </v-col>
             <v-col cols="12" sm="6" lg="3">
                 <v-card flat>
@@ -100,7 +100,7 @@
                         :width="25"
                         :value="Pvalue"
                         color="green"
-                    >New Farmers added</v-progress-circular>
+                    >New Farmers <br>Lots Received <br>Successfully </v-progress-circular>
                 </v-card>
             </v-col>
 
