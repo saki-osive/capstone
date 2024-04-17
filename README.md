@@ -75,6 +75,10 @@ Rice LotLock was chosen as an example for several reasons:
 
 ![ArchitectureDiagram.png](diagrams%2FArchitectureDiagram.png)
 
+## Technical Diagram
+
+![TechnicalDiagram.png](diagrams%2FTechnicalDiagram.png)
+
 ## Demo Video 
 
 https://drive.google.com/file/d/1YCF5FXSF61e3E34nstbEXHoqEFQVMH8M/view?usp=sharing
