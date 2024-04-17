@@ -62,20 +62,22 @@ Rice LotLock was chosen as an example for several reasons:
 
 ## Stakeholders Diagram
 
-TODO
+![Stakeholders.png](diagrams%2FStakeholders.png)
 
-## UseCase Flow Diagram
+![OQCodeScanning.png](diagrams%2FOQCodeScanning.png)
 
-TODO
+![InfraLayer.png](diagrams%2FInfraLayer.png)
 
-### User Stories for Stakeholders
-
-TODO
+![BlockchainInitialization.png](diagrams%2FBlockchainInitialization.png)
 
 
 ## Architecture Diagram
 
-TODO
+![ArchitectureDiagram.png](diagrams%2FArchitectureDiagram.png)
+
+## Demo Video 
+
+https://drive.google.com/file/d/1YCF5FXSF61e3E34nstbEXHoqEFQVMH8M/view?usp=sharing
 
 ## Development Team
 
